@@ -1,0 +1,201 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: .5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+}
+
+
+
+
+hr {
+  margin-top: -40px;
+  margin-bottom: 1rem;
+  border: 0;
+	width: 100%;
+    border-top-color: currentcolor;
+    border-top-style: none;
+    border-top-width: 0px;
+    border-top: 8px solid #f4f6f9;
+  
+	
+}
+
+.theme-purple .navbar, .theme-purple .page-loader-wrapper {
+  background: #017069;
+}
+
+section.content::before {
+  background-color: #045444!important;
+}
+
+
+.navbar-brand h6{
+	
+	font-weight: 800;
+	font-size: 20px;
+	margin-top: -17px;
+		
+}
+
+.notify .heartbit{
+	
+	border-color: #f80000;
+}
+
+.notify .point{
+	
+	background-color: #f80000;
+}
+
+.sidebar .user-info .image img {
+  
+  width: 35px;
+  vertical-align: bottom !important;
+  border: 1px solid #fff;
+}
+
+
+
+.sidebar .user-info{
+	
+	text-align: left;
+	
+}
+
+
+section small {
+  font-size: 90%;
+	color: #ebebeb;
+}
+
+.sidebar .menu .list a small {
+  position: relative;
+  font-weight: bold;
+  font-size: 14px !important;	
+  /*top: calc(50% - 7.5px);*/
+  right: 0px;
+  top: -5px !important;
+}
+
+
+.sidebar {
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  font-family: "Montserrat",sans-serif;
+  background: #fff;
+  width: 260px;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  z-index: 11;
+}
+
+
+.sidebar .menu .list a{
+	/*text-transform: uppercase;*/
+	font-family: 'Poppins', sans-serif;
+	color: #111;
+	font-weight: 500;
+	text-transform: uppercase !important;
+	font-size: 14px;
+}
+
+.card .header h2 {
+  color: #111;
+  position: relative;
+}
+
+
+.theme-purple .sidebar .menu .list a:hover {
+  color: #017069;
+}
+
+.theme-purple .sidebar .menu .list li.active > :first-child span {
+  color: #017069;
+}
+
+.theme-purple .sidebar .menu .list li.active > :first-child i, .theme-purple .sidebar .menu .list li.active > :first-child span {
+  color: #017069;
+}
+
+.sidebar .user-info .detail{
+	text-transform: capitalize !important;
+	margin-top: -15px;
+	font-size: 13px !important;
+
+}
+
+
+.breadcrumb-item + .breadcrumb-item::before {
+  
+  color: #fff;
+ 
+}
+
+
+/*form css*/
+
+
+label {
+	font-family: 'Poppins', sans-serif;
+  display: inline-block;
+	font-size: 17px;
+  margin-bottom: 1rem;
+	font-weight: 400;
+	color: #017069;
+}
+
+.editor{
+	font-family: 'Poppins', sans-serif;
+	font-size: 17px;
+	margin-bottom: 1rem;
+	font-weight: 400;
+	color: #017069;
+	
+}
+
+.card{
+	
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+	
+}
+.form-control{
+
+	border-radius: 0px !important;
+	height: 48px !important;
+	font-size: .9571em;
+}
+
+.input-group-addon{
+	
+	border-radius: 0px !important;
+}
+
+.input-group, .form-group {
+  margin-bottom: 45px;
+}
+
+
+
+
+.form-group {
+  margin-bottom: 45px;
+}
+
+
+
+
+

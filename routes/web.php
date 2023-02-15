@@ -14,5 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.index');
 });
+Route::view('about','frontend.about');
+Route::view('how-it-works','frontend.how-it-works');
+Route::view('contact','frontend.contact');
+Route::view('blog','frontend.blog');
+Route::view('properties','frontend.properties');
+Route::view('properties-details','frontend.properties-details');
+
+Route::view('admin/property_add','admin.property-add');
+
