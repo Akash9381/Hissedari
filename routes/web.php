@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,11 @@ Route::view('contact','frontend.contact');
 Route::view('blog','frontend.blog');
 Route::view('properties','frontend.properties');
 Route::view('properties-details','frontend.properties-details');
-
+Route::view('login','frontend.login')->name('login');
+Route::view('signup','frontend.signup');
 Route::view('admin/property_add','admin.property-add');
 
+Route::controller(AuthController::class)->group(function(){
+    Route::post('authenticate','authenticate')->name('authenticate');
+    Route::get('/logout','logout');
+});

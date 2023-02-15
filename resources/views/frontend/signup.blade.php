@@ -4,39 +4,39 @@
 
 <head>
     <!-- Google Tag Manager -->
-    
+
     <!-- End Google Tag Manager -->
     <title>HISSEDARI - Fractional Ownership</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
 
     <!-- External CSS libraries -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-submenu.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend/assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend/assets/css/animate.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend/assets/css/bootstrap-submenu.css')}}">
 
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
-    <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/leaflet.css" type="text/css">
-    <link rel="stylesheet" href="css/map.css" type="text/css">
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css">
-    <link type="text/css" rel="stylesheet" href="fonts/bootstrap-icons/bootstrap-icons.css">
-    <link rel="stylesheet" type="text/css" href="fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" type="text/css" href="fonts/linearicons/style.css">
-    <link rel="stylesheet" type="text/css"  href="css/jquery.mCustomScrollbar.css">
-    <link rel="stylesheet" type="text/css"  href="css/dropzone.css">
-    <link rel="stylesheet" type="text/css"  href="css/slick.css">
-    <link rel="stylesheet" type="text/css"  href="css/normalize.css">
-    <link rel="stylesheet" type="text/css"  href="css/boxes-component.css">
-    <link rel="stylesheet" type="text/css"  href="css/boxes-core.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend/assets/css/bootstrap-select.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend/assets/css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/leaflet.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/map.css')}}" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend/assets/fonts/font-awesome/css/font-awesome.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{asset('frontend/assets/fonts/bootstrap-icons/bootstrap-icons.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend/assets/fonts/flaticon/font/flaticon.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend/assets/fonts/linearicons/style.css')}}">
+    <link rel="stylesheet" type="text/css"  href="{{asset('frontend/assets/css/jquery.mCustomScrollbar.css')}}">
+    <link rel="stylesheet" type="text/css"  href="{{asset('frontend/assets/css/dropzone.css')}}">
+    <link rel="stylesheet" type="text/css"  href="{{asset('frontend/assets/css/slick.css')}}">
+    <link rel="stylesheet" type="text/css"  href="{{asset('frontend/assets/css/normalize.css')}}">
+    <link rel="stylesheet" type="text/css"  href="{{asset('frontend/assets/css/boxes-component.css')}}">
+    <link rel="stylesheet" type="text/css"  href="{{asset('frontend/assets/css/boxes-core.css')}}">
 
     <!-- Custom stylesheet -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/initial.css">
-    <link rel="stylesheet" type="text/css" id="style_sheet" href="css/skins/default.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend/assets/css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend/assets/css/initial.css')}}">
+    <link rel="stylesheet" type="text/css" id="style_sheet" href="{{asset('frontend/assets/css/skins/default.css')}}">
 
     <!-- Favicon icon -->
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" >
+    <link rel="shortcut icon" href="{{asset('frontend/assets/img/favicon.png')}}" type="image/x-icon" >
 
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
@@ -85,8 +85,8 @@
             <div class="col-lg-5 col-md-12 form-section">
                 <div class="login-inner-form">
                     <div class="details">
-                        <a href="login.html">
-                            <img src="img/logos/black-logo.png" alt="logo">
+                        <a href="{{url('/login')}}">
+                            <img src="{{asset('frontend/assets/img/logos/black-logo.png')}}" alt="logo">
                         </a>
                         <h3>Create An Cccount</h3>
                         <form action="#" method="GET">
@@ -96,14 +96,14 @@
                             <div class="form-group form-box">
                                 <input type="tel" name="phone" class="form-control" pattern ="[789][0-9]{9}" placeholder="Phone number" aria-label="Phone number">
                             </div>
-                            
-                            
+
+
                             <div class="form-group form-box">
                                 <input type="email" name="email" class="form-control" placeholder="Email Address" aria-label="Email Address">
                             </div>
-                            
-                            
-                            
+
+
+
                             <div class="form-group form-box">
                                 <input type="password" name="password" class="form-control" autocomplete="off" placeholder="Password" aria-label="Password">
                             </div>
@@ -118,15 +118,15 @@
                             <div class="form-group">
                                 <button type="submit" class="btn-md btn-theme w-100">Register</button>
                             </div>
-                            
-                            
+
+
                             <div class="google">
-                             	
-                             	<a href="#"><img width="20px;" src="img/google_icon.svg"> &nbsp; signup With Google</a>
-                             	
+
+                             	<a href="#"><img width="20px;" src="{{asset('frontend/assets/img/google_icon.svg')}}"> &nbsp; signup With Google</a>
+
                              </div>
-                            
-                            <p class="account">Already a member?<a href="login.html"> Login here</a></p>
+
+                            <p class="account">Already a member?<a href="{{url('/login')}}"> Login here</a></p>
                         </form>
                     </div>
                 </div>
@@ -145,33 +145,33 @@
     </form>
 </div>
 
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/jquery.min.js"></script>
-<script  src="js/bootstrap-submenu.js"></script>
-<script  src="js/rangeslider.js"></script>
-<script  src="js/jquery.mb.YTPlayer.js"></script>
-<script  src="js/bootstrap-select.min.js"></script>
-<script  src="js/jquery.easing.1.3.js"></script>
-<script  src="js/jquery.scrollUp.js"></script>
-<script  src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script  src="js/leaflet.js"></script>
-<script  src="js/leaflet-providers.js"></script>
-<script  src="js/leaflet.markercluster.js"></script>
-<script  src="js/dropzone.js"></script>
-<script  src="js/slick.min.js"></script>
-<script  src="js/jquery.filterizr.js"></script>
-<script  src="js/jquery.magnific-popup.min.js"></script>
-<script  src="js/jquery.countdown.js"></script>
-<script  src="js/modernizr.custom.js"></script>
-<script  src="js/boxes-component.js"></script>
-<script  src="js/boxes-core.js"></script>
-<script  src="js/maps.js"></script>
-<script  src="js/app.js"></script>
+<script src="{{asset('frontend/assets/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('frontend/assets/js/jquery.min.js')}}"></script>
+<script  src="{{asset('frontend/assets/js/bootstrap-submenu.js')}}"></script>
+<script  src="{{asset('frontend/assets/js/rangeslider.js')}}"></script>
+<script  src="{{asset('frontend/assets/js/jquery.mb.YTPlayer.js')}}"></script>
+<script  src="{{asset('frontend/assets/js/bootstrap-select.min.js')}}"></script>
+<script  src="{{asset('frontend/assets/js/jquery.easing.1.3.js')}}"></script>
+<script  src="{{asset('frontend/assets/js/jquery.scrollUp.js')}}"></script>
+<script  src="{{asset('frontend/assets/js/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+<script  src="{{asset('frontend/assets/js/leaflet.js')}}"></script>
+<script  src="{{asset('frontend/assets/js/leaflet-providers.js')}}"></script>
+<script  src="{{asset('frontend/assets/js/leaflet.markercluster.js')}}"></script>
+<script  src="{{asset('frontend/assets/js/dropzone.js')}}"></script>
+<script  src="{{asset('frontend/assets/js/slick.min.js')}}"></script>
+<script  src="{{asset('frontend/assets/js/jquery.filterizr.js')}}"></script>
+<script  src="{{asset('frontend/assets/js/jquery.magnific-popup.min.js')}}"></script>
+<script  src="{{asset('frontend/assets/js/jquery.countdown.js')}}"></script>
+<script  src="{{asset('frontend/assets/js/modernizr.custom.js')}}"></script>
+<script  src="{{asset('frontend/assets/js/boxes-component.js')}}"></script>
+<script  src="{{asset('frontend/assets/js/boxes-core.js')}}"></script>
+<script  src="{{asset('frontend/assets/js/maps.js')}}"></script>
+<script  src="{{asset('frontend/assets/js/app.js')}}"></script>
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script  src="js/ie10-viewport-bug-workaround.js"></script>
+<script  src="{{asset('frontend/assets/js/ie10-viewport-bug-workaround.js')}}"></script>
 <!-- Custom javascript -->
-<script  src="js/ie10-viewport-bug-workaround.js"></script>
+<script  src="{{asset('frontend/assets/js/ie10-viewport-bug-workaround.js')}}"></script>
 </body>
 
 </html>
