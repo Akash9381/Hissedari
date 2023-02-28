@@ -45,7 +45,8 @@
     <link rel="stylesheet" href="{{asset('admin/light/assets/css/coustam.css')}}">
 
     <script src="https://cdn.ckeditor.com/4.20.1/standard/ckeditor.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    @yield('css')
 
 
 </head>
