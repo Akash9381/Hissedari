@@ -703,7 +703,7 @@
         function addNewRow() {
             var rowHtml = '<tr><td><input type="text" class="form-control" /></td>' +
                 '<td><input type="text" class="form-control" /></td>' +
-                '<td><input type="button" value="delete" onclick="deleteRow(this)" /></td></tr>';
+                '<td><i class="fa fa-trash" aria-hidden="true" onclick="deleteRow(this)"></i></td></tr>';
             $("#employee-table").append(rowHtml);
         }
         /* This method will delete a row */
@@ -734,7 +734,7 @@
         function addNewRow1() {
             var rowHtml = '<tr><td><input type="text" class="form-control" /></td>' +
                 '<td><input type="text" class="form-control" /></td>' +
-                '<td><input type="button" value="delete" onclick="deleteRow1(this)" /></td></tr>';
+                '<td><i class="fa fa-trash" aria-hidden="true" onclick="deleteRow1(this)"></i></td></tr>';
             $("#place-table").append(rowHtml);
         }
         /* This method will delete a row */
@@ -765,7 +765,7 @@
         function addNewRow2() {
             var rowHtml = '<tr><td><input type="text" class="form-control" /></td>' +
                 '<td><input type="text" class="form-control" /></td>' +
-                '<td><input type="button" value="delete" onclick="deleteRow2(this)" /></td></tr>';
+                '<td><i class="fa fa-trash" aria-hidden="true" onclick="deleteRow2(this)"></i></td></tr>';
             $("#price-table").append(rowHtml);
         }
         /* This method will delete a row */
