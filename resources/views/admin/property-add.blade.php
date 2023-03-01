@@ -595,31 +595,17 @@
                         <div class="body">
 
                             <p class="editor">Faq </p>
-                            <div class="form-group form-float">
+                            <button id="add" onclick=adddiv()>Add New Faq</button>
+                            <br>
+                            <div class="form-group form-float" id="faq">
                                 <div class="form-group form-float">
                                     <input type="text" class="form-control" placeholder="Faq title" name="name"
                                         required="" aria-required="true">
                                     <textarea style="width:100%; height: 100px; margin-top: 20px;"></textarea>
                                 </div>
                             </div>
-                            <hr>
 
-                            <div class="form-group form-float">
-                                <div class="form-group form-float">
-                                    <input type="text" class="form-control" placeholder="Faq title" name="name"
-                                        required="" aria-required="true">
-                                    <textarea style="width:100%; height: 100px; margin-top: 20px;"></textarea>
-                                </div>
-                            </div>
-                            <hr>
-
-                            <div class="form-group form-float">
-
-                                <div class="form-group form-float">
-                                    <input type="text" class="form-control" placeholder="Faq title" name="name"
-                                        required="" aria-required="true">
-                                    <textarea style="width:100%; height: 100px; margin-top: 20px;"></textarea>
-                                </div>
+                            <div>
                             </div>
                         </div>
                     </div>
@@ -798,5 +784,27 @@
                 table.deleteRow(rowCount - 1);
             }
         }
+    </script>
+    <script>
+        function adddiv() {
+            var rowHtml = `<div><button id="btn" onclick=closediv(this)>X</button>
+                            <hr>
+
+                            <div class="form-group form-float">
+                                <div class="form-group form-float">
+                                    <input type="text" class="form-control" placeholder="Faq title" name="name"
+                                        required="" aria-required="true">
+                                    <textarea style="width:100%; height: 100px; margin-top: 20px;"></textarea>
+                                </div>
+                            </div>
+                            </div>`;
+
+      $("#faq").append(rowHtml);
+    }
+
+    function closediv(e) {
+      var par = $(event.target).parent();
+      par.remove();
+    }
     </script>
 @endsection
