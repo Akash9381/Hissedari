@@ -33,6 +33,60 @@
                    <div class="main-title mt-5" id="open">
                     <h2 class="text-uppercase">Open</h2>
                     </div>
+                    @forelse ($properties as $property)
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="property-box">
+                            <div class="property-photo">
+                                <a href="{{url('property/'.$property->id.'/'.$property->slug)}}" class="property-img">
+                                    <div class="tag">Open</div>
+                                    <!--<div class="price-box"><span>$850.00</span> Per month</div>-->
+                                    <img class="d-block w-100" src="{{url('Property-Images/'.$property->property_feature_image)}}" alt="properties">
+                                </a>
+                            </div>
+                            <div class="detail">
+                                <h1 class="title">
+                                    <a href="properties-details.html">{{$property->property_name}}</a> &nbsp;<a href="#"><i title="share" style="color: #538184;" class="fa fa-share-square-o"></i></a>
+                                </h1>
+
+                                <div class="location">
+                                    <a href="#">
+                                        <i class="flaticon-pin"></i> {{$property->property_location ?? 'NA'}}
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="container">
+                                  <div class="row">
+                                   <div class="col text-dark">{{$property->property_target_irr ?? 'NA'}}</div>
+                                   <div class="col text-dark">Target IRR</div>
+                                   <div class="w-100"></div>
+
+                                   <div class="col text-dark">{{$property->property_gross_entry ?? 'NA'}}</div>
+                                   <div class="col text-dark">Gross Entry Yield</div>
+
+                                   <div class="w-100"></div>
+
+                                   <div class="col text-dark">{{$property->property_price ?? 'NA'}}</div>
+                                   <div class="col text-dark">Asset Value</div>
+
+                                   <div class="w-100"></div>
+
+                                   </div>
+                                   </div>
+                            <div class="footer">
+                                <a href="{{url('property/'.$property->id.'/'.$property->slug)}}">
+                                      View Details
+                                </a>
+                                <span>
+                                <a href="#">
+                                       Join Waitlist
+                                </a>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    @empty
+
+                    @endforelse
                     <div class="col-lg-4 col-md-4 col-sm-12">
                         <div class="property-box">
                             <div class="property-photo">
