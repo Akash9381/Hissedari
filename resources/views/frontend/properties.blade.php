@@ -45,7 +45,7 @@
                             </div>
                             <div class="detail">
                                 <h1 class="title">
-                                    <a href="properties-details.html">{{$property->property_name}}</a> &nbsp;<a href="#"><i title="share" style="color: #538184;" class="fa fa-share-square-o"></i></a>
+                                    <a href="{{url('property/'.$property->id.'/'.$property->slug)}}">{{$property->property_name}}</a> &nbsp;<a href="#"><i title="share" style="color: #538184;" class="fa fa-share-square-o"></i></a>
                                 </h1>
 
                                 <div class="location">
