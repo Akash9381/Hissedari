@@ -176,20 +176,12 @@
 
                 <table class="table table-striped">
                     <tbody>
+                        @foreach (json_decode($property->tenant_title) as $key => $tenant_title)
                         <tr>
-                            <td>Monthly rent (₹/sqft)</td>
-                            <td>₹ 9.225</td>
+                            <td>{{$tenant_title}}</td>
+                            <td>{{json_decode($property->tenant_value)[$key]}}</td>
                         </tr>
-
-                        <tr>
-                            <td>Escalation on base rent </td>
-                            <td>5% per annum </td>
-                        </tr>
-
-                        <tr>
-                            <td>Security Deposit</td>
-                            <td>Security Deposit</td>
-                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
 
@@ -212,24 +204,14 @@
                     <h3>Property Location </h3>
                     {!! $property->property_details!!}
                 </div>
-
-
                 <table class="table table-success table-striped">
                     <tbody>
+                        @foreach (json_decode($property->place) as $key => $place)
                         <tr>
-                            <td>Airport </td>
-                            <td>8km </td>
+                            <td>{{$place}}</td>
+                            <td>{{json_decode($property->distance)[$key]}}</td>
                         </tr>
-
-                        <tr>
-                            <td>Highway </td>
-                            <td> 12km </td>
-                        </tr>
-
-                        <tr>
-                            <td>Railway Station </td>
-                            <td> 6km</td>
-                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
 
@@ -249,13 +231,13 @@
                 <div class="about-text clearfix">
                     <h3>Floor Plans</h3>
                     {!! $property->floor_plans !!}
-                    <strong>1,48,935 sqft</strong>
+                    <strong>{{$property->property_area}} sqft</strong>
                     <p>Total Opportunity Space</p>
 
                     <div class="row">
-                        <div class="col-6"><img src="img/floor-plans.png" alt="floor-plans" class="img-fluid w-100">
+                        <div class="col-6"><img src="{{url('Property-Images/'.$property->structure_image)}}" alt="floor-plans" class="img-fluid w-100">
                         </div>
-                        <div class="col-6"><img src="img/3d.png" alt="floor-plans" class="img-fluid w-100"></div>
+                        <div class="col-6"><img src="{{url('Property-Images/'.$property->three_d_structure_image)}}" alt="floor-plans" class="img-fluid w-100"></div>
                     </div>
                 </div>
 
@@ -280,32 +262,12 @@
 
                 <table class="table table-success table-striped">
                     <tbody>
+                        @foreach (json_decode($property->price_type) as $key => $price_type)
                         <tr>
-                            <td>Gross Purchase Price </td>
-                            <td> ₹ 18,78,07,035 </td>
+                            <td>{{$price_type}}</td>
+                            <td>{{json_decode($property->price_value)[$key]}}</td>
                         </tr>
-
-                        <tr>
-                            <td>Stamp Duty & Registration </td>
-                            <td>0</td>
-                        </tr>
-
-                        <tr>
-                            <td>Acquisition Fee </td>
-                            <td>₹ 56,34,211</td>
-                        </tr>
-                        <tr>
-                            <td>Legal Fees </td>
-                            <td>₹ 6,50,000</td>
-                        </tr>
-                        <tr>
-                            <td>Reserves </td>
-                            <td>₹ 9,08,754</td>
-                        </tr>
-                        <tr>
-                            <td>Net Purchase Price </td>
-                            <td>₹19,50,00,000</td>
-                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
 
@@ -323,8 +285,6 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="about-text clearfix">
                     <h3>FaQ</h3>
-
-
                     <div class="faq-accordion accordion accordion-flush faq-accordion" id="accordionFlushExample">
                         @foreach (json_decode($property->faq_title) as $key => $faq_title)
                         <div class="accordion-item">

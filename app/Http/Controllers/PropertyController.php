@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Property;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
 class PropertyController extends Controller
@@ -34,8 +35,6 @@ class PropertyController extends Controller
         $array['tenant_title'] = json_encode($array['tenant_title']);
         $array['tenant_value'] = json_encode($array['tenant_value']);
         $array['place'] = json_encode($array['place']);
-        $array['distance'] = json_encode($array['distance']);
-        $array['distance'] = json_encode($array['distance']);
         $array['distance'] = json_encode($array['distance']);
         $array['price_type'] = json_encode($array['price_type']);
         $array['price_value'] = json_encode($array['price_value']);
@@ -78,7 +77,7 @@ class PropertyController extends Controller
     }
 
     public function AllProperty(){
-        $properties = Property::all();
+        $properties = Property::orderBy('id','desc')->get();
         return view('frontend.properties',compact('properties'));
     }
 

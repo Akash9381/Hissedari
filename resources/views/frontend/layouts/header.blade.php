@@ -37,8 +37,14 @@
                     <a href="submit-property.html" class="nav-link link-color"><i class="fa fa-plus"></i> Submit Property</a>
                 </li>-->
                 </ul>
+                @guest
                 <a href="{{url('/login')}}" class="btn btn-primary btn-lg active" role="button"
                     aria-pressed="true">Login</a>
+                @endguest
+                @auth
+                <a href="{{url('/logout')}}" class="btn btn-danger btn-lg active" role="button"
+                aria-pressed="true">Logout</a>
+                @endauth
             </div>
         </nav>
     </div>

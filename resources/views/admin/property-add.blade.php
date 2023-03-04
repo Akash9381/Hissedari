@@ -169,7 +169,7 @@
                                     <div class="col-lg-3 col-md-6">
                                         <label> Gross Entry Yield </label>
                                         <div class="form-group form-float">
-                                            <input type="text" class="form-control" placeholder="Gross Entry Yield "
+                                            <input type="text" class="form-control" placeholder="Gross Entry Yield (9.4%)"
                                                 name="property_gross_entry" aria-required="true">
                                         </div>
                                     </div>
@@ -177,7 +177,7 @@
                                     <div class="col-lg-3 col-md-6">
                                         <label> Target IRR** </label>
                                         <div class="form-group form-float">
-                                            <input type="text" class="form-control" placeholder="Target IRR** "
+                                            <input type="text" class="form-control" placeholder="Target IRR** (12.8%)"
                                                 name="property_target_irr" aria-required="true">
                                         </div>
                                     </div>
@@ -185,7 +185,7 @@
                                     <div class="col-lg-3 col-md-6">
                                         <label> Target Multiple** </label>
                                         <div class="form-group form-float">
-                                            <input type="text" class="form-control" placeholder="Target Multiple** "
+                                            <input type="text" class="form-control" placeholder="Target Multiple** (1.9x) "
                                                 name="property_target_multiple" aria-required="true">
                                         </div>
                                     </div>
@@ -209,10 +209,7 @@
                 <div class="row clearfix">
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <div class="card">
-
                             <div class="body">
-
-
                                 <div class="form-group form-float">
                                     <p class="editor">Overview </p>
                                     <textarea name="property_overview"></textarea>
@@ -226,16 +223,11 @@
                 <div class="row clearfix">
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <div class="card">
-
                             <div class="body">
-
-
                                 <div class="form-group form-float">
                                     <p class="editor">Tenancy </p>
-                                    <textarea name="property_tenancy"></textarea>
+                                    <textarea name="property_tenancy" ></textarea>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
@@ -316,8 +308,8 @@
                                         <th></th>
                                     </tr>
                                     <tr>
-                                        <td><input type="text" name="tenant_title[]"  required class="form-control" value="e.g.(Monthly rent (₹/sqft))"></td>
-                                        <td><input type="text" name="tenant_value[]" required class="form-control" value="e.g(₹ 9.225)"></td>
+                                        <td><input type="text" name="tenant_title[]" placeholder="e.g.(Monthly rent (₹/sqft))"  required class="form-control" value=""></td>
+                                        <td><input type="text" name="tenant_value[]" placeholder="e.g(₹ 9.225)" required class="form-control" ></td>
                                     </tr>
                                 </table>
                                 <table id="mainTable" class="table table-striped">
@@ -387,8 +379,8 @@
                                         <th></th>
                                     </tr>
                                     <tr>
-                                        <td><input type="text" name="place[]" required class="form-control" value="e.g(AirPort)"></td>
-                                        <td><input type="text" name="distance[]" required class="form-control" value="e.g(8km)"></td>
+                                        <td><input type="text" name="place[]" placeholder="e.g(Airport)" required class="form-control" ></td>
+                                        <td><input type="text" name="distance[]" placeholder="e.g(8km)" required class="form-control" ></td>
                                     </tr>
                                 </table>
 
@@ -522,8 +514,8 @@
                                         <th></th>
                                     </tr>
                                     <tr>
-                                        <td><input type="text" name="price_type[]" required class="form-control" value="e.g(Gross Purchase Price)"></td>
-                                        <td><input type="text" name="price_value[]" required class="form-control" value="e.g(₹ 18,78,07,035)"></td>
+                                        <td><input type="text" name="price_type[]" placeholder="e.g(Gross Purchase Price)" required class="form-control" ></td>
+                                        <td><input type="text" name="price_value[]" placeholder="e.g(₹ 18,78,07,035)" required class="form-control" ></td>
                                     </tr>
                                 </table>
 
