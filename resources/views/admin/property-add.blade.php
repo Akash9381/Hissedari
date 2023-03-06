@@ -1,5 +1,5 @@
 ﻿@extends('admin.layouts.admin_layouts')
-@section('title', 'Property Add')
+@section('title', 'Add New Property')
 @section('content')
 
     <!-- Main Content -->

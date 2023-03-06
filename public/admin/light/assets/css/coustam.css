@@ -13,6 +13,28 @@
   color: inherit;
 }
 
+a {
+  color: #111;
+}
+
+
+ select, a {
+  outline: none !important;
+  cursor: pointer;
+}
+
+.breadcrumb-item.active {
+  color: #fff;
+}
+
+
+.theme-purple .card .header h2 strong {
+  color: #017069;
+}
+
+.theme-purple .card .header h2::before {
+  background: #017069;
+}
 
 
 
@@ -25,8 +47,8 @@ hr {
     border-top-style: none;
     border-top-width: 0px;
     border-top: 8px solid #f4f6f9;
-  
-	
+
+
 }
 
 .theme-purple .navbar, .theme-purple .page-loader-wrapper {
@@ -39,25 +61,25 @@ section.content::before {
 
 
 .navbar-brand h6{
-	
+
 	font-weight: 800;
 	font-size: 20px;
 	margin-top: -17px;
-		
+
 }
 
 .notify .heartbit{
-	
+
 	border-color: #f80000;
 }
 
 .notify .point{
-	
+
 	background-color: #f80000;
 }
 
 .sidebar .user-info .image img {
-  
+
   width: 35px;
   vertical-align: bottom !important;
   border: 1px solid #fff;
@@ -66,9 +88,9 @@ section.content::before {
 
 
 .sidebar .user-info{
-	
+
 	text-align: left;
-	
+
 }
 
 
@@ -80,7 +102,7 @@ section small {
 .sidebar .menu .list a small {
   position: relative;
   font-weight: bold;
-  font-size: 14px !important;	
+  font-size: 14px !important;
   /*top: calc(50% - 7.5px);*/
   right: 0px;
   top: -5px !important;
@@ -140,9 +162,9 @@ section small {
 
 
 .breadcrumb-item + .breadcrumb-item::before {
-  
+
   color: #fff;
- 
+
 }
 
 
@@ -164,13 +186,13 @@ label {
 	margin-bottom: 1rem;
 	font-weight: 400;
 	color: #017069;
-	
+
 }
 
 .card{
-	
+
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-	
+
 }
 .form-control{
 
@@ -180,7 +202,7 @@ label {
 }
 
 .input-group-addon{
-	
+
 	border-radius: 0px !important;
 }
 
@@ -193,6 +215,103 @@ label {
 
 .form-group {
   margin-bottom: 45px;
+}
+
+
+.responsive-table {
+    padding: 20px;
+    display: inline-block;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+}
+
+.manage-table .listing-photoo {
+    width: 20%;
+}
+
+.manage-table .title-container {
+    width: 55%;
+    padding: 0 20px;
+}
+
+.manage-table .title-container h2 {
+    font-weight: 500;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.manage-table .title-container h5 {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    color: #343434;
+}
+
+.manage-table .title-container h6 {
+    font-size: 15px;
+    font-weight: 400;
+    color: #343434;
+}
+
+.manage-table .expire-date {
+    font-size: 15px;
+    width: 15%;
+    font-weight: 500;
+    padding: 0 20px 0 0;
+    color: #343434;
+}
+
+.manage-table .action {
+    width: 10%;
+}
+
+.manage-table .action a {
+    display: block;
+    font-size: 14px;
+    margin: 3px 0;
+    font-weight: 500;
+    color: #343434;
+}
+
+
+@media (max-width: 500px){
+
+	.responsive-table {
+  text-align: center;
+}
+
+	.manage-table .listing-photoo img {
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+	.manage-table .title-container {
+  padding: 20px 0 0;
+  width: 100%;
+  float: left;
+}
+
+	.manage-table .expire-date {
+  width: 100%;
+  float: left;
+  margin-bottom: 10px;
+}
+
+	.manage-table .action {
+  width: 100%;
+  float: left;
+  padding: 0;
+}
+
+	.manage-table .action a {
+  display: inline-block;
+  margin: 3px 0;
+  padding: 3px 15px;
+  background: #f5f6f7;
+  border-radius: 50px;
+}
+
+
 }
 
 

@@ -90,4 +90,14 @@ class PropertyController extends Controller
         }
     }
 
+    public function ManagePropertyIndex(){
+        $properties = Property::orderBy('id','desc')->get();
+        return view('admin.manage-property', compact('properties'));
+    }
+
+    public function ApprovalPropertyIndex(){
+        $properties = Property::orderBy('id','desc')->get();
+        return view('admin.property-approval' , compact('properties'));
+    }
+
 }

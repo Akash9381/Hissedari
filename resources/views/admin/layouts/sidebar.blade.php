@@ -22,8 +22,8 @@
 
                     <li><a href="javascript:void(0);" class="menu-toggle"><span>Sell</span></a>
                         <ul class="ml-menu">
-                            <li><a href="property-list.html">Property Add</a></li>
-                            <li><a href="#">Manage Property </a></li>
+                            <li class="{{setActiveClass('admin/property_add')}}"><a href="{{url('admin/property_add')}}">Property Add</a></li>
+                            <li class="{{setACtiveClass('admin/manage-property')}}"><a href="{{url('admin/manage-property')}}">Manage Property </a></li>
                             <li><a href="#">Assigned Cp List </a></li>
 
                         </ul>
@@ -31,7 +31,7 @@
 
                     <li><a href="groups.html"><span>Account</span></a></li>
                     <li><a href="file-dashboard.html"><span>CP</span></a></li>
-                    <li><a href="jvectormap.html"><span>Property Status</span></a></li>
+                    <li class="{{setACtiveClass('admin/approval-property')}}"><a href="{{url('admin/approval-property')}}"><span>Property Approval</span></a></li>
                     <li><a href="jvectormap.html"><span>Relationship Manager</span></a></li>
                     <li><a href="jvectormap.html"><span>Employee
                             </span></a></li>

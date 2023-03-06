@@ -41,4 +41,6 @@ Route::controller(AuthController::class)->group(function(){
 Route::group(['middleware' => ['role:super-admin']], function(){
     Route::get('admin/property_add',[PropertyController::class,'index']);
     Route::post('admin/property-insert',[PropertyController::class,'store']);
+    Route::get('/admin/manage-property',[PropertyController::class,'ManagePropertyIndex']);
+    Route::get('/admin/approval-property',[PropertyController::class,'ApprovalPropertyIndex']);
 });
