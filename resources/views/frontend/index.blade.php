@@ -77,7 +77,7 @@
 
             <div class="main-title-3">
 
-                <a href="properties.html">
+                <a href="{{ route('property') }}">
                     <h1>Explore investment opportunities</h1>
                 </a>
             </div>
@@ -86,83 +86,86 @@
             <div class="slick-slider-area">
                 <div class="row slick-carousel"
                     data-slick='{"slidesToShow": 3, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
-                    <div class="slick-slide-item">
-                        <div class="property-box-6">
-                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                                <div class="flipper">
-                                    <div class="front">
-                                        <div class="property-photo">
-                                            <img src="{{ asset('frontend/assets/img/properties/properties-11.jpg') }}"
-                                                alt="photo" class="img-fluid w-100">
-                                            <div class="tag">FULLY FUNDED</div>
-                                            <h5 class="text-center mt-4">Industrial Opportunity V &nbsp; <a
-                                                    href="#"><i title="share" style="color: #538184;"
-                                                        class="fa fa-share-square-o"></i></a></h5>
+                    @foreach ($properties as $property)
+                        <div class="slick-slide-item">
+                            <div class="property-box-6">
+                                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <div class="property-photo">
+                                                <img src="{{url('Property-Images/'.$property->property_feature_image)}}"
+                                                    alt="photo" class="img-fluid w-100">
+                                                <div class="tag">FULLY FUNDED</div>
+                                                <h5 class="text-center mt-4">{{$property->property_name}} &nbsp; <a
+                                                        href="#"><i title="share" style="color: #538184;"
+                                                            class="fa fa-share-square-o"></i></a></h5>
 
-                                            <hr>
+                                                <hr>
 
-                                            <div class="row">
+                                                <div class="row">
 
-                                                <div class="col exl-det">12.8%</div>
-                                                <div class="col exl-det">Target IRR</div>
-                                                <div class="w-100"></div>
+                                                    <div class="col exl-det">{{$property->property_target_irr ?? 'NA'}}</div>
+                                                    <div class="col exl-det">Target IRR</div>
+                                                    <div class="w-100"></div>
 
-                                                <div class="col exl-det ">9.4%</div>
-                                                <div class="col exl-det">Gross Entry Yield</div>
+                                                    <div class="col exl-det ">{{$property->property_gross_entry ?? 'NA'}}</div>
+                                                    <div class="col exl-det">Gross Entry Yield</div>
 
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="back">
-                                        <div class="property-inner">
-                                            <div class="property-info">
-                                                <h4 class="properties-name">
-                                                    <a href="properties-details.html">Industrial Opportunity V
-                                                    </a> &nbsp; <a href="#"><i title="share" style="color: #538184;"
-                                                            class="fa fa-share-square-o"></i></a>
-                                                </h4>
-                                                <p class="location">
-                                                    <a href="properties-details.html">
-                                                        <i class="fa fa-map-marker"></i> Zirakpur
-                                                    </a>
-                                                </p>
-
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <div class="col text-dark">12.8%</div>
-                                                        <div class="col text-dark">Target IRR</div>
-                                                        <div class="w-100"></div>
-                                                        <hr>
-                                                        <div class="col text-dark">9.4%</div>
-                                                        <div class="col text-dark">Gross Entry Yield</div>
-
-                                                        <div class="w-100"></div>
-                                                        <hr>
-                                                        <div class="col text-dark">₹ 63,50,00,000</div>
-                                                        <div class="col text-dark">Asset Value</div>
-
-                                                        <div class="w-100"></div>
-                                                        <hr>
-                                                        <div class="col text-dark">
-                                                            <a href="properties-details.html" class="sign-in"><i
-                                                                    class="fa fa-sign-in"></i> View Details </a>
-                                                        </div>
-                                                        <div class="col text-dark">
-                                                            <a href="#" class="sign-in"><i
-                                                                    class="fa fa-sign-in"></i> Join Waitlist </a>
-                                                        </div>
-
-                                                    </div>
                                                 </div>
+                                            </div>
 
+                                        </div>
+                                        <div class="back">
+                                            <div class="property-inner">
+                                                <div class="property-info">
+                                                    <h4 class="properties-name">
+                                                        <a href="properties-details.html">{{$property->property_name}}
+                                                        </a> &nbsp; <a href="#"><i title="share"
+                                                                style="color: #538184;"
+                                                                class="fa fa-share-square-o"></i></a>
+                                                    </h4>
+                                                    <p class="location">
+                                                        <a href="properties-details.html">
+                                                            <i class="fa fa-map-marker"></i> {{$property->property_location ?? 'NA'}}
+                                                        </a>
+                                                    </p>
+
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col text-dark">{{$property->property_target_irr ?? 'NA'}}</div>
+                                                            <div class="col text-dark">Target IRR</div>
+                                                            <div class="w-100"></div>
+                                                            <hr>
+                                                            <div class="col text-dark">{{$property->property_gross_entry ?? 'NA'}}</div>
+                                                            <div class="col text-dark">Gross Entry Yield</div>
+
+                                                            <div class="w-100"></div>
+                                                            <hr>
+                                                            <div class="col text-dark"> ₹{{$property->property_price ?? 'NA'}}</div>
+                                                            <div class="col text-dark">Asset Value</div>
+
+                                                            <div class="w-100"></div>
+                                                            <hr>
+                                                            <div class="col text-dark">
+                                                                <a href="{{url('property/'.$property->id.'/'.$property->slug)}}" class="sign-in"><i
+                                                                        class="fa fa-sign-in"></i> View Details </a>
+                                                            </div>
+                                                            <div class="col text-dark">
+                                                                <a href="#" class="sign-in"><i
+                                                                        class="fa fa-sign-in"></i> Join Waitlist </a>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
 
                     <div class="slick-slide-item">
                         <div class="property-box-6">
@@ -586,8 +589,8 @@
                         <p>You can customize your investment to fit in your budget and needs
                         </p>
                         <!-- <a href="services.html" class="read-more">
-                            Read More
-                        </a>-->
+                                Read More
+                            </a>-->
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -597,8 +600,8 @@
                         <p>Cut down on expenses and enjoy luxurious properties at a fraction of the cost
                         </p>
                         <!--<a href="services.html" class="read-more">
-                            Read More
-                        </a>-->
+                                Read More
+                            </a>-->
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -610,8 +613,8 @@
 
                         </p>
                         <!--  <a href="services.html" class="read-more">
-                            Read More
-                        </a>-->
+                                Read More
+                            </a>-->
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -623,8 +626,8 @@
 
                         </p>
                         <!-- <a href="services.html" class="read-more">
-                            Read More
-                        </a>-->
+                                Read More
+                            </a>-->
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -635,8 +638,8 @@
                             leaving it all to the experts as Hissedari.com
                         </p>
                         <!--<a href="services.html" class="read-more">
-                            Read More
-                        </a>-->
+                                Read More
+                            </a>-->
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -646,8 +649,8 @@
                         <p>Multiple liquidity options for a profitable exit.
                         </p>
                         <!--<a href="services.html" class="read-more">
-                            Read More
-                        </a>-->
+                                Read More
+                            </a>-->
                     </div>
                 </div>
             </div>

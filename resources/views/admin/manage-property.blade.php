@@ -54,7 +54,7 @@
                                                 </select>
                                             </td>
                                             <td class="action">
-                                                <a href="#"><i class="fa fa-pencil"></i> Edit</a>
+                                                <a href="{{url('/admin/edit-property/'.$property->id)}}"><i class="fa fa-pencil"></i> Edit</a>
 
                                                 <a href="#" class="delete"><i class="fa fa-trash"></i> Delete</a>
                                             </td>

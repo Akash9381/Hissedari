@@ -9,4 +9,8 @@ class Property extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
+
+    public function PropertyImages(){
+        return $this->hasMany(PropertyImage::class,'property_id');
+    }
 }

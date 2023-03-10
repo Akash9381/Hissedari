@@ -17,7 +17,7 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="Subscribe-box">
                         <div class="newsletter-content-wrap">
-                            <form class="newsletter-form d-flex" action="#">
+                            <form class="newsletter-form d-flex" action="#" autocomplete="off">
                                 <input class="form-control" type="email" id="email"
                                     placeholder="Email Address...">
                                 <button class="btn btn-theme" type="submit"><i
