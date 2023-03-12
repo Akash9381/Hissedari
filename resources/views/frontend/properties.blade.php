@@ -40,7 +40,7 @@
                                 <a href="{{url('property/'.$property->id.'/'.$property->slug)}}" class="property-img">
                                     <div class="tag">Open</div>
                                     <!--<div class="price-box"><span>$850.00</span> Per month</div>-->
-                                    <img class="d-block w-100" src="{{url('Property-Images/'.$property->property_feature_image)}}" alt="properties">
+                                    <img class="d-block w-100" src="{{asset('/storage/property_image/feature_image/'.$property->property_feature_image)}}" alt="properties">
                                 </a>
                             </div>
                             <div class="detail">

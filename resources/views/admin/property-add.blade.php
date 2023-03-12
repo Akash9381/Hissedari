@@ -241,7 +241,7 @@
                             <div class="body">
                                 <div class="form-group form-float">
                                     <p class="editor">Lease Start </p>
-                                    <textarea name="lease_start"></textarea>
+                                    <input type="date" name="lease_start" id="">
                                 </div>
                             </div>
                         </div>
@@ -254,7 +254,7 @@
                             <div class="body">
                                 <div class="form-group form-float">
                                     <p class="editor">Lock-in End Date </p>
-                                    <textarea name="lease_lock"></textarea>
+                                    <input type="date" name="lease_lock" id="">
                                 </div>
                             </div>
                         </div>
@@ -267,7 +267,7 @@
                             <div class="body">
                                 <div class="form-group form-float">
                                     <p class="editor">Lease End Date </p>
-                                    <textarea name="lease_end"></textarea>
+                                    <input type="date" name="lease_end" id="">
                                 </div>
                             </div>
                         </div>

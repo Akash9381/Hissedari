@@ -33,7 +33,7 @@
                                         @forelse ( $properties as $property)
                                         <tr class="responsive-table">
                                             <td class="listing-photoo">
-                                                <img src="{{url('Property-Images/'.$property->property_feature_image)}}">
+                                                <img src="{{asset('/storage/property_image/feature_image/'.$property->property_feature_image)}}">
                                             </td>
                                             <td class="title-container">
                                                 <h2><a href="#">{{$property->property_name}}</a></h2>

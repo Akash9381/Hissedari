@@ -93,8 +93,8 @@
                                     <div class="flipper">
                                         <div class="front">
                                             <div class="property-photo">
-                                                <img src="{{url('Property-Images/'.$property->property_feature_image)}}"
-                                                    alt="photo" class="img-fluid w-100">
+                                                <img src="{{asset('/storage/property_image/feature_image/'.$property->property_feature_image)}}"
+                                                    alt="{{$property->property_feature_image}}" class="img-fluid w-100">
                                                 <div class="tag">FULLY FUNDED</div>
                                                 <h5 class="text-center mt-4">{{$property->property_name}} &nbsp; <a
                                                         href="#"><i title="share" style="color: #538184;"
@@ -119,13 +119,13 @@
                                             <div class="property-inner">
                                                 <div class="property-info">
                                                     <h4 class="properties-name">
-                                                        <a href="properties-details.html">{{$property->property_name}}
+                                                        <a href="{{url('property/'.$property->id.'/'.$property->slug)}}">{{$property->property_name}}
                                                         </a> &nbsp; <a href="#"><i title="share"
                                                                 style="color: #538184;"
                                                                 class="fa fa-share-square-o"></i></a>
                                                     </h4>
                                                     <p class="location">
-                                                        <a href="properties-details.html">
+                                                        <a href="{{url('property/'.$property->id.'/'.$property->slug)}}">
                                                             <i class="fa fa-map-marker"></i> {{$property->property_location ?? 'NA'}}
                                                         </a>
                                                     </p>

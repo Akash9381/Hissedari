@@ -7,14 +7,15 @@
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
 
-                <div class="carousel-item items-bg active" data-bs-interval="3000">
+                {{-- <div class="carousel-item items-bg active" data-bs-interval="3000">
                     <!-- <img class="d-block  w-100 h-100" src="img/banner/commercial-building.jpg" alt="banner">-->
                     <img src="{{ url('Property-Images/' . $property->property_feature_image) }}" class="img-fluid"
                         alt="{{ $property->property_feature_image }}">
-                </div>
+                </div> --}}
                 @foreach ($property['PropertyImages'] as $key => $value)
-                    <div class="carousel-item items-bg" data-bs-interval="3000">
-                        <img src="{{ url('Property-Images/' . $value['image']) }}" class="img-fluid"
+                    <div class="carousel-item items-bg @if ($key == 0) active @endif"
+                        data-bs-interval="3000">
+                        <img src="{{ asset('/storage/property_image/' . $value['image']) }}" class="img-fluid"
                             alt="{{ $value['image'] }}">
 
                     </div>
@@ -234,11 +235,12 @@
                         <p>Total Opportunity Space</p>
 
                         <div class="row">
-                            <div class="col-6"><img src="{{ url('Property-Images/' . $property->structure_image) }}"
+                            <div class="col-6"><img
+                                    src="{{ asset('/storage/property_image/structure_image/' . $property->structure_image) }}"
                                     alt="floor-plans" class="img-fluid w-100">
                             </div>
                             <div class="col-6"><img
-                                    src="{{ url('Property-Images/' . $property->three_d_structure_image) }}"
+                                    src="{{ asset('/storage/property_image/three_d_structure_image/' . $property->three_d_structure_image) }}"
                                     alt="floor-plans" class="img-fluid w-100"></div>
                         </div>
                     </div>
@@ -308,68 +310,6 @@
                                     </div>
                                 </div>
                             @endforeach
-                            {{-- <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                    aria-controls="flush-collapseOne">
-                                    When will the monthly payouts commence for investors?
-                                </button>
-                            </h2>
-                            <div id="flush-collapseOne" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    <div class="p-text">
-                                        Monthly payouts for investors will commence one month after asset
-                                        registration.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
-                                    aria-controls="flush-collapseTwo">
-                                    What are the growth prospects for Hosur?
-
-                                </button>
-                            </h2>
-                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    <div class="p-text">
-                                        Hosur is an established hub for manufacturing &amp; warehousing given its
-                                        proximity to Bangalore and the highway connectivity. The area continues to
-                                        see major growth as evidenced by the recent announcement of several major
-                                        projects such as Tata Electronics’s manufacturing plant, Ola Electric, Delta
-                                        Electronics, Ether Energy, etc.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                    aria-controls="flush-collapseThree">
-                                    What measures have been taken to ensure the project is completed on time?
-
-                                </button>
-                            </h2>
-                            <div id="flush-collapseThree" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    <div class="p-text">
-                                        Our partner Avigna provides us with regular updates on the progress of the
-                                        developments at the site. Our expert asset management also conducts regular
-                                        property inspections to keep track of progress.
-                                    </div>
-                                </div>
-                            </div>
-                        </div> --}}
-
-
 
                         </div>
 
@@ -396,7 +336,7 @@
                                     <td> <img src="{{ asset('frontend/assets/img/pdfIcon.svg') }}" width="20px">
                                         {{ $property->resource_one }}</td>
                                     <td>
-                                        <a class="btn" href="{{ url('Property-Images/'.$property->resource_one) }}"><i
+                                        <a class="btn" href="{{ asset('/storage/resource_one/' . $property->resource_one) }}"><i
                                                 class="fa fa-download"></i> Download</a>
                                     </td>
                                 </tr>
@@ -404,7 +344,7 @@
                                     <td> <img src="{{ asset('frontend/assets/img/microsoft-excel.svg') }}"
                                             width="20px"> {{ $property->resource_two }}
                                     </td>
-                                    <td><a class="btn" href="{{ url('Property-Images/'.$property->resource_two) }}"><i
+                                    <td><a class="btn" href="{{ asset('/storage/resource_two/' . $property->resource_two) }}"><i
                                                 class="fa fa-download"></i> Download</a> </td>
                                 </tr>
                             </tbody>

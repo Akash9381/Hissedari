@@ -20,7 +20,7 @@
         </div>
         <div class="container-fluid">
             <!-- Color Pickers -->
-            <form action="{{ url('/admin/property-insert') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url('/property/update/'.$property->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="row clearfix">
                     <div class="col-lg-12 col-md-12 col-sm-12">
@@ -95,15 +95,16 @@
                                 </div>
                                 <div class="row">
                                     @foreach ($property['PropertyImages'] as $key => $value)
-                                    <div class="col-4">
-                                        <div class="1st">
-                                            <button type="submit" class="close">
-                                                <span>&times;</span>
-                                            </button>
-                                            <img name="property_image[]" class="w-100"
-                                                src="{{ url('Property-Images/' . $value['image']) }}">
+                                        <div class="col-4">
+                                            {{-- <a onclick="DeleteProperty({{$value['id']}})" class="fa fa-trash"> --}}
+                                            <a onclick="DeleteProperty(this,{{$value['id']}})" id="{{$value['id']}}" class="fa fa-trash">
+                                                <span></span>
+                                            </a>
+                                            <div class="1st">
+                                                <img class="w-100"
+                                                    src="{{asset('/storage/property_image/'.$value['image'])}}">
+                                            </div>
                                         </div>
-                                    </div>
                                     @endforeach
                                 </div>
                             </div>
@@ -132,11 +133,8 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="1st">
-                                            <button type="submit" class="close">
-                                                <span>&times;</span>
-                                            </button>
                                             <img name="property_feature_image" class="w-100"
-                                                src="{{ url('Property-Images/' . $property->property_feature_image) }}">
+                                                src="{{ asset('/storage/property_image/feature_image/'.$property->property_feature_image)}}">
                                         </div>
                                     </div>
                                 </div>
@@ -269,7 +267,7 @@
                             <div class="body">
                                 <div class="form-group form-float">
                                     <p class="editor">Lease Start </p>
-                                    <textarea name="lease_start">{{ $property->lease_start }}</textarea>
+                                    <input type="date" name="lease_start" value="{{ $property->lease_start }}" id="">
                                 </div>
                             </div>
                         </div>
@@ -282,7 +280,7 @@
                             <div class="body">
                                 <div class="form-group form-float">
                                     <p class="editor">Lock-in End Date </p>
-                                    <textarea name="lease_lock">{{ $property->lease_lock }}</textarea>
+                                    <input type="date" name="lease_lock" value="{{ $property->lease_lock }}" id="">
                                 </div>
                             </div>
                         </div>
@@ -295,7 +293,7 @@
                             <div class="body">
                                 <div class="form-group form-float">
                                     <p class="editor">Lease End Date </p>
-                                    <textarea name="lease_end">{{ $property->lease_end }}</textarea>
+                                    <input type="date" name="lease_end" value="{{ $property->lease_end }}" id="">
                                 </div>
                             </div>
                         </div>
@@ -349,13 +347,6 @@
                                             @endif
                                         </tr>
                                     @endforeach
-                                    <tr>
-                                        <td><input type="text" name="tenant_title[]"
-                                                placeholder="e.g.(Monthly rent (₹/sqft))" required class="form-control"
-                                                value=""></td>
-                                        <td><input type="text" name="tenant_value[]" placeholder="e.g(₹ 9.225)"
-                                                required class="form-control"></td>
-                                    </tr>
                                 </table>
 
                             </div>
@@ -476,11 +467,8 @@
                                 <div class="row">
                                     <div class="col-4">
                                         <div class="1st">
-                                            <button type="submit" class="close">
-                                                <span>&times;</span>
-                                            </button>
                                             <img name="property_feature_image" class="w-100"
-                                                src="{{ url('Property-Images/' . $property->structure_image) }}">
+                                                src="{{asset('/storage/property_image/structure_image/'.$property->structure_image)}}">
                                         </div>
                                     </div>
                                 </div>
@@ -510,11 +498,8 @@
                                 <div class="row">
                                     <div class="col-4">
                                         <div class="1st">
-                                            <button type="submit" class="close">
-                                                <span>&times;</span>
-                                            </button>
                                             <img name="property_feature_image" class="w-100"
-                                                src="{{ url('Property-Images/' . $property->three_d_structure_image) }}">
+                                                src="{{ asset('/storage/property_image/three_d_structure_image/'.$property->three_d_structure_image )}}">
                                         </div>
                                     </div>
                                 </div>
@@ -786,6 +771,26 @@
         function closediv(e) {
             var par = $(event.target).parent();
             par.remove();
+        }
+    </script>
+    <script>
+        function DeleteProperty(e,id){
+            var par = $(event.target).parent();
+            par.remove();
+            $.ajax({
+                url:'/property_image/delete',
+                method:'get',
+                data:{id:id},
+                success:function(res){
+                   if(res.success){
+
+                    console.log('delete image');
+                   }else{
+                    console.log('image no deleted')
+                   }
+                }
+            })
+
         }
     </script>
 @endsection
