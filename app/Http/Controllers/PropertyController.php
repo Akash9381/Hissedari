@@ -30,7 +30,7 @@ class PropertyController extends Controller
             $request->file('property_feature_image')->storeAs('public/property_image/feature_image', $filenametostore);
 
             $featureimagepath = public_path('storage/property_image/feature_image/' . $filenametostore);
-            Image::make($featureimagepath)->resize(520, 357)->save($featureimagepath);
+            Image::make($featureimagepath)->resize(510, 270)->save($featureimagepath);
             $array['property_feature_image'] = $filenametostore;
         };
         $array['tenant_title']      = json_encode($array['tenant_title']);
@@ -94,7 +94,7 @@ class PropertyController extends Controller
                     $image->storeAs('public/property_image', $filenametostore);
 
                     $featureimagepath = public_path('storage/property_image/' . $filenametostore);
-                    Image::make($featureimagepath)->resize(1300, 500)->save($featureimagepath);
+                    Image::make($featureimagepath)->resize(1920, 1080)->save($featureimagepath);
                     $data = new PropertyImage;
                     $data->property_id = $property->id;
                     $data->image = $filenametostore;
@@ -167,7 +167,7 @@ class PropertyController extends Controller
                 $request->file('property_feature_image')->storeAs('public/property_image/feature_image', $filenametostore);
 
                 $featureimagepath = public_path('storage/property_image/feature_image/' . $filenametostore);
-                Image::make($featureimagepath)->resize(520, 357)->save($featureimagepath);
+                Image::make($featureimagepath)->resize(510, 270)->save($featureimagepath);
                 $array['property_feature_image'] = $filenametostore;
             } else {
                 $array['property_feature_image'] = $property->property_feature_image;
@@ -273,7 +273,7 @@ class PropertyController extends Controller
                         $image->storeAs('public/property_image', $filenametostore);
 
                         $featureimagepath = public_path('storage/property_image/' . $filenametostore);
-                        Image::make($featureimagepath)->resize(1300, 500)->save($featureimagepath);
+                        Image::make($featureimagepath)->resize(1920, 1080)->save($featureimagepath);
                         $data = new PropertyImage;
                         $data->property_id = $id;
                         $data->image = $filenametostore;
