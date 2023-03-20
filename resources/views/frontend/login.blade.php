@@ -5,7 +5,7 @@
     <!-- Google Tag Manager -->
 
     <!-- End Google Tag Manager -->
-    <title>HISSEDARI - Fractional Ownership</title>
+    <title>HISSEDARI - Login Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
 
@@ -72,12 +72,12 @@
                     </div>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
                     <div class="social-list">
-                        <div class="buttons">
+                        {{-- <div class="buttons">
                             <a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a>
                             <a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a>
                             <a href="#" class="google-bg"><i class="fa fa-google"></i></a>
                             <a href="#" class="dribbble-bg"><i class="fa fa-linkedin"></i></a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -92,8 +92,13 @@
                             <div class="col-sm-12 alert alert-danger">
                                 {{session()->get('error')}}
                             </div>
-                            @endif
-                        <form action="{{'/authenticate'}}" method="POST">
+                        @endif
+                        @if (session()->has('success'))
+                            <div class="col-sm-12 alert alert-success">
+                                {{session()->get('success')}}
+                            </div>
+                        @endif
+                        <form action="{{url('user-login')}}" method="POST">
                             @csrf
                             <div class="form-group form-box">
                                 <input type="email" name="email" class="form-control" placeholder="Email Address" aria-label="Email Address">

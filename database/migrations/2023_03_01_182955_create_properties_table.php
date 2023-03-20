@@ -19,6 +19,7 @@ return new class extends Migration
             $table->text('property_image')->nullable();
             $table->string('property_feature_image')->nullable();
             $table->string('property_name')->nullable();
+            $table->string('slug')->nullable();
             $table->string('property_location')->nullable();
             $table->string('property_area')->nullable();
             $table->string('property_min_investment')->nullable();

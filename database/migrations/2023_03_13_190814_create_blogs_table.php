@@ -13,8 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('properties', function (Blueprint $table) {
+        Schema::create('blogs', function (Blueprint $table) {
+            $table->id();
+            $table->string('user_id')->nullable();
+            $table->string('title')->nullable();
             $table->string('slug')->nullable();
+            $table->string('image')->nullable();
+            $table->text('description')->nullable();
+            $table->string('status')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -25,8 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('properties', function (Blueprint $table) {
-            $table->dropColumn('slug');
-        });
+        Schema::dropIfExists('blogs');
     }
 };

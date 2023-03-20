@@ -27,8 +27,8 @@
                             Resources
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">FAQs</a></li>
-                            <li><a class="dropdown-item" href="{{url('/blog')}}">Articles</a></li>
+                            <li><a class="dropdown-item" href="{{url('/faq')}}">FAQs</a></li>
+                            <li><a class="dropdown-item" href="{{url('/blog')}}">Blog</a></li>
                             <li><a class="dropdown-item" href="{{url('/contact')}}">Contact Us </a></li>
 
                         </ul>
@@ -78,7 +78,7 @@
                 <li><a href="#">Resources <em class="fa fa-chevron-down"></em></a>
                     <ul>
                         <li><a href="#">FAQs</a></li>
-                        <li><a href="{{url('/blog')}}">Articles</a></li>
+                        <li><a href="{{url('/blog')}}">Blog</a></li>
                         <li><a href="{{url('/contact')}}">Contact Us </a></li>
 
                     </ul>
