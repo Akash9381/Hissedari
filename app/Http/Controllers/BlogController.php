@@ -135,7 +135,7 @@ class BlogController extends Controller
             Blog::where('id', $id)->update([
                 'status' => 'approved'
             ]);
-            return redirect('/admin-approved-blog')->with('success', 'Blog approved successfully');
+            return redirect('admin/blog-approval')->with('success', 'Blog approved successfully');
         } catch (\Exception $e) {
             return back()->with('error', $e->getMessage());
         }
