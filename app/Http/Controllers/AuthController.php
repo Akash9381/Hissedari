@@ -33,14 +33,13 @@ class AuthController extends Controller
             'email' => 'required|email',
             'password' => 'required'
         ]);
-
         $remember = $request->has('remember') ? true : false ;
         $credentials = $request->only('email', 'password');
         if(Auth::attempt($credentials,$remember)){
             $request->session()->regenerate();
-                if(Auth::user()){
-                    if(Auth::user()->hasRole('user')){
-                        return redirect('user/stories');
+            if(Auth::user()){
+                if(Auth::user()->hasRole('user')){
+                        return redirect('user/portfolio-summary');
                     }
                 }
         }else{

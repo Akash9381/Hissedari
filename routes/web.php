@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PropertyController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -38,13 +39,16 @@ Route::view('signup','frontend.signup');
 Route::view('faq', 'frontend.faq' );
 
 // ==================Client Dashboard Urls Starts ==============================
+
 Route::prefix('user')->group(function(){
+    Route::group(['middleware' => ['role:user']],function(){
     Route::view('/investment-details','client-dashboard.investor-details');
+    Route::post('/details',[UserController::class,'InsertData']);
     Route::view('/invested','client-dashboard.invested');
     Route::view('/documents','client-dashboard.documents-details');
     Route::view('/portfolio-summary','client-dashboard.portfolio-summary');
     Route::view('/my-assets','client-dashboard.my-assets');
-
+    });
 });
 
 // ==================Client Dashboard Urls END ==============================
@@ -78,7 +82,7 @@ Route::group(['middleware' => ['role:super-admin']], function(){
     Route::get('/property_image/delete',[PropertyController::class,'PropertyImageDelete']);
     Route::get('/admin/spv-id',[AdminController::class,'SpvId']);
     Route::get('/admin/users',[AdminController::class,'Users']);
-    Route::get('/admin/users-profile',[AdminController::class,'UsersProfile']);
+    Route::get('/admin/users-profile/{id}',[AdminController::class,'UsersProfile']);
     Route::get('admin/blog-approval',[BlogController::class,'BlogApproval']);
     Route::get('admin/blog-preview/{id}',[BlogController::class,'AdminBlogPreview']);
     Route::get('admin/blog/approved/{id}',[BlogController::class,'AdminBlogApproved']);

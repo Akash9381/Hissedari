@@ -51,7 +51,7 @@ p {
     line-height: 25px;
     color: #343434;
     font-weight: 400;
-   
+
 }
 
 a {
@@ -74,16 +74,16 @@ span {
 }
 
 .text-success{
-	
-	
+
+
 	 font-weight: 900;
 }
 
 .fw-bold{
-	
+
 	font-weight: 900 !important;
 	font-size: 1rem !important;
-	
+
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -668,7 +668,7 @@ button:focus {
     .flex-direction-nav {
         display: none
     }
-	
+
 
 
     .bgburns .slides li .slide-background {
@@ -8654,11 +8654,11 @@ margin-top: 30px;
 .sidebar-left {
     margin: 0 0 30px 0;
     background: #fff;
-   
+
 }
 
 .widget {
-   
+
     padding: 30px;
     border-bottom: solid 1px #eaeaea;
 }
@@ -8900,7 +8900,7 @@ margin-top: 30px;
     left: 0;
     right: 0;
     bottom: 0;
- 
+
 }
 
 .sub-banner .breadcrumb-area {
@@ -8919,7 +8919,7 @@ margin-top: 30px;
    /* text-transform: uppercase;*/
     line-height: normal;
     font-size:37px;
-	
+
 }
 
 .sub-banner .breadcrumbs li {
@@ -10038,7 +10038,7 @@ margin-top: 30px;
 .tabbing-box .accordion-item {
 	padding: 20px;
     background-color: transparent;
-	
+
     border: none;
 }
 
@@ -11808,7 +11808,7 @@ margin-top: 30px;
     .dashboard-content {
         padding: 30px 30px 0;
 		margin-top: 100px;
-		
+
     }
 
     .dashboard-nav {
@@ -13026,29 +13026,29 @@ margin-top: 30px;
 }
 
 .navbar-nav{
-	
+
 	padding-right: 130px;
-	
+
 }
 
 .sign-in{
-	
+
 	/*text-transform: uppercase;*/
 	color: #017069;
-	
+
 	/*padding-left: 30px;*/
     font-weight: bold;
-	
-	
-	
+
+
+
 }
 
 .exl-det{
-	
+
 	color: #575757;
 	padding-left: 30px;
 	font-weight: bold;
-	
+
 }
 
 .dec{
@@ -13056,14 +13056,14 @@ margin-top: 30px;
 	color: #017069;
 	font-weight: bold;
 	font-size: 25px;
-	
-	
+
+
 }
 
 .det{
-	
+
 	color: #111;
-	
+
 }
 
 
@@ -13080,7 +13080,7 @@ margin-top: 30px;
 }
 
 .btn{
-	
+
 	color: #111;
 }
 
@@ -13091,67 +13091,67 @@ margin-top: 30px;
 
 
 .investment{
-	
+
 	margin-top: 30px;
-		
+
 }
 .advantage{
-	
+
 	color: #fff !important;
 	/*text-transform: uppercase;*/
 	font-size: 30px;
-	
+
 	line-height: 1.2;
-	
+
 }
 
 ol{
-	
+
 	color: #111;
 	margin-top: 30px;
 	line-height: 2;
 	font-weight: 700;
-	
+
 }
 
 .mission{
 	margin-top: 100px;
-	
+
 }
 
 .account{
 
 	margin-top: 30px !important;
-	
+
 }
 
 .google{
-	
+
 	box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
 .text-dark{
 
 	font-size: 15px;
-	
+
 }
 
 .mt-40{
-	
+
 	margin-top: 70px !important;
-	
-	
+
+
 }
 
 .das-nav {
-	
+
 	margin-top: 90px;
 	margin-bottom: 50px !important;
 	position: absolute;
 	z-index: 99;
-	
-	
-		
+
+
+
 }
 
 .accordion-item:last-of-type .accordion-button.collapsed {
@@ -13164,16 +13164,16 @@ ol{
 }
 
 .bg-open{
-	
+
 	background-color: #012a2d;
-	
+
 }
 
 .d-xs-none{
-	
+
 	display: none;
-	
-	
+
+
 }
 
 .lh-lg {
@@ -13181,34 +13181,34 @@ ol{
 }
 
 .menu-icon{
-	
+
 	margin-right: 8px !important;
-	
+
 }
 
 .alert-light {
-	
+
 	position: fixed;
     color: #636464;
     z-index: 99;
     background-color: #fefefe;
     border-color: #fdfdfe;
 	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-	
+
 }
 
 .join{
-	
+
 	background-color: #538184;
 	color: #fff;
-	
-	
+
+
 	text-align: center;
 
-	
+
 }
 
-@media (max-width: 576px) { 
+@media (max-width: 576px) {
 
  .dashboard .dashboard-inner {
   padding-top: 10px !important;
@@ -13219,53 +13219,53 @@ ol{
   justify-content: space-between;
   align-items: center;
 }
-	
+
 	.itr_benifits .left {
      width: 100% !important;
-	 margin-top: -50px;	
+	 margin-top: -50px;
 }
-	
+
 	.itr_benifits .right {
   margin: 0 0 0 0rem !important;
 }
-	
+
 	.wrapper{
-		
+
 		display: block !important;
 	}
-	
+
 	.box{
-		
+
 		height: auto !important;
 	}
-	
+
 	.blog-4{
-		
+
 		height: auto !important;
 	}
-	
+
 	.tpo-que::before {
- 
- 
+
+
   height: 1232px !important;
 }
-	
+
     .tpo-ques::before {
- 
- 
+
+
   height: 432px !important;
 }
-	
+
 	.itr_benifits .right ul li{
-		
+
 		width: 50% !important;
-		
+
 	}
-	
+
 	/*.itr_benifits .right ul li{
 		padding-top: 30px !important;
 		padding-left: 120px !important;
-		
+
 	}*/
 
 
@@ -13325,12 +13325,12 @@ ol{
 
 
 .mt-n3{
-	
+
 	margin-top: -40px !important;
 }
 
 .mt-n4{
-	
+
 	margin-top: -60px;
 }
 
@@ -13551,8 +13551,8 @@ section.tax-optimiser {
 
 
 .itr_benifits .left{
-	
-  
+
+
 	width: 50%;
 	margin-top: -30px;
 }
@@ -13641,19 +13641,19 @@ section.tax-optimiser {
 
 .flip-box-back {
   background-color: #012a2d;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;	
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   color: white;
   transform: rotateX(180deg);
 }
 
 /*.flip-box-back h6{
-	
+
 	font-size: 22px !important;
-	
+
 }*/
 
 .flip-box-back p {
-	
+
 	color: #fff;
 	padding: 50px;
 	font-size: 17px !important;
@@ -13701,6 +13701,10 @@ section.tax-optimiser {
 }
 
 
+label{
 
+	color: #000 !important;
+
+}
 
 
