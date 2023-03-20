@@ -14,7 +14,7 @@
     <!-- Sub Banner end -->
 
     <div class="main-title text-center mt-40">
-        <a href="register.html" class="btn-4 none-btn-992 text-center">post New blog <i class="fa fa-plus"></i></a>
+        <a href="{{route('blog.dashboard')}}" class="btn-4 none-btn-992 text-center">post New blog <i class="fa fa-plus"></i></a>
 
     </div>
 
