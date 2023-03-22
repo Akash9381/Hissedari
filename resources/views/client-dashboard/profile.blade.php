@@ -203,7 +203,7 @@
                     <div class="col-lg-3 col-md-3 col-sm-12">
                         <div class="form-group address">
                             <label class="form-label">Full Name</label>
-                            <p><strong>{{$user->InvestorData['nominee_first_name'] ?? "NA" }} {{ $user->InvestorData['nominee_last_name']}}</strong></p>
+                            <p><strong>{{$user->InvestorData['nominee_first_name'] ?? "NA" }} {{ $user->InvestorData['nominee_last_name'] ?? ''}}</strong></p>
 
 
                         </div>
