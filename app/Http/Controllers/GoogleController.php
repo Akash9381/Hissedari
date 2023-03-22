@@ -32,8 +32,8 @@ class GoogleController extends Controller
 
                 ]);
             }
-
-            Auth::login($saveUser);
+            $newuser = User::where('id',$saveUser->id)->first();
+            Auth::login($newuser);
             return redirect('user/portfolio-summary');
 
         } catch (\Throwable $th) {
