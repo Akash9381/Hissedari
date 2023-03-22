@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\UserController;
@@ -25,6 +26,7 @@ Route::controller(HomeController::class)->group(function(){
     Route::get('/','Index');
     Route::get('/home','Index')->name('home');
 });
+
 Route::view('about','frontend.about');
 Route::view('how-it-works','frontend.how-it-works');
 Route::view('contact','frontend.contact');
@@ -38,6 +40,10 @@ Route::view('signup','frontend.signup');
 
 Route::view('faq', 'frontend.faq' );
 
+//================Auto Login With Google   ================
+Route::get('/google',[GoogleController::class,'LoginWithGoogle']);
+Route::any('/google/response',[GoogleController::class,'GoogleResponse']);
+
 // ==================Client Dashboard Urls Starts ==============================
 
 Route::prefix('user')->group(function(){
@@ -48,6 +54,7 @@ Route::prefix('user')->group(function(){
     Route::view('/documents','client-dashboard.documents-details');
     Route::view('/portfolio-summary','client-dashboard.portfolio-summary');
     Route::view('/my-assets','client-dashboard.my-assets');
+    Route::get('/profile',[UserController::class,'Profile']);
     });
 });
 

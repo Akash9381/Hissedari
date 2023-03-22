@@ -118,14 +118,14 @@
 
                             <div class="form-group">
 
-                               <button href="investor-details.html" class="btn-md btn-theme w-100">Login</button>
+                               <button class="btn-md btn-theme w-100">Login</button>
 
                             </div>
 
 
                              <div class="google">
 
-                             	<a href="investor-details.html"><img width="20px;" src="{{asset('frontend/assets/img/google_icon.svg')}}"> &nbsp; Login With Google</a>
+                             	<a href="{{'/google'}}"><img width="20px;" src="{{asset('frontend/assets/img/google_icon.svg')}}"> &nbsp; Login With Google</a>
 
                              </div>
 

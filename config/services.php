@@ -31,4 +31,10 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'google' =>[
+        'client_id' => '17020782050-22q1o1s1jlnvortpm2md0luofdg3b9h4.apps.googleusercontent.com',
+        'client_secret' => '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',
+        'redirect' => 'https://hissedari.com/google/response',
+        ],
+
 ];

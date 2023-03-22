@@ -50,7 +50,7 @@
                                         @if ($blog['status'] == 'draft')
                                             <div class="blog">
                                                 <h6>{{ $blog->title }}</h6>
-                                                {!! $blog->description !!}
+                                               <p> {!! $blog->description !!}</p>
                                                 <ul class="meta">
                                                     <li><a href="javascript:void(0);">Last edited 33 minutes ago</a></li>
                                                     <li><a href="javascript:void(0);">(111 words)</a></li>
@@ -72,11 +72,11 @@
                                         @endif
                                     @empty
                                         <div class="blog">
-                                            You have no drafts
+                                           <p> You have no drafts </p>
                                         </div>
                                     @endforelse
 
-                                    <div class="blog">
+                                    {{-- <div class="blog">
                                         <h6>What is Lorem Ipsum?</h6>
 
                                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -103,7 +103,7 @@
                                                 </ul>
                                             </li>
                                         </ul>
-                                    </div>
+                                    </div> --}}
 
                                 </div>
                                 <div role="tabpanel" class="tab-pane show" id="Publishe">
