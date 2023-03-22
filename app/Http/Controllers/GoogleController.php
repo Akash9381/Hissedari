@@ -25,6 +25,7 @@ class GoogleController extends Controller
                     'name' => $user->getName(),
                     'email' => $user->getEmail(),
                 ]);
+                $saveUser->assignRole('user');
             } else {
                 $saveUser = User::where('email',$user->getEmail())->update([
                     'google_id' => $user->getId(),
