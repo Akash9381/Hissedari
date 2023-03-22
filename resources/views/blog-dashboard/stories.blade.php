@@ -71,7 +71,7 @@
                                             </div>
                                         @endif
                                     @empty
-                                        <div>
+                                        <div class="blog">
                                             You have no drafts
                                         </div>
                                     @endforelse
@@ -134,7 +134,7 @@
                                             </div>
                                         @endif
                                     @empty
-                                        <div>You haven't published any public stories yet.</div>
+                                        <div class="blog">You haven't published any public stories yet.</div>
                                     @endforelse
                                     <div class="blog">
 
@@ -216,11 +216,6 @@
 
 
     </div>
-
-
-
-
-
     </section>
 
 

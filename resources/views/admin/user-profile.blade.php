@@ -5,9 +5,7 @@
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-7 col-md-6 col-sm-12">
-                    <h2>User Profile
-
-                    </h2>
+                    <h2> User Profile </h2>
                 </div>
                 <div class="col-lg-5 col-md-6 col-sm-12">
                     <button class="btn btn-white btn-icon btn-round hidden-sm-down float-right ml-3" type="button">
@@ -17,7 +15,6 @@
                         <li class="breadcrumb-item"><a href="{{ url('/') }}"><i class="zmdi zmdi-home"></i> Home</a>
                         </li>
                         <li class="breadcrumb-item"><a href="javascript:void(0);">users Profile </a></li>
-
                     </ul>
                 </div>
             </div>

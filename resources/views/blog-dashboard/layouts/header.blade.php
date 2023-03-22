@@ -5,7 +5,7 @@
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-10 col-md-10 col-sm-6">
-                    <h2><a class="text-white" href="{{url('user/stories')}}">HISSEDA₹I</a> </h2>
+                    <h2><a class="text-white" href="{{url('/')}}">HISSEDA₹I</a> </h2>
                 </div>
                 <div class="col-lg-2 col-md-2 col-sm-6">
                     <div class="dropdown">

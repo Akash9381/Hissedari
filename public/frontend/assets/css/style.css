@@ -144,7 +144,8 @@ ul {
     left: 0;
     bottom: 0;
     right: 0;
-    background: #fff;
+    background:#017069;
+	color: #fff !important;
     content: "";
     transform: perspective(200px) scaleX(0.1) rotateX(90deg) translateZ(-10px);
     transform-origin: bottom center;
@@ -349,7 +350,7 @@ ul {
 }
 
 .pinterest-bg {
-    background: #bd081c;
+    background: #10ba18;
     color: #fff;
 }
 
@@ -379,7 +380,7 @@ ul {
 }
 
 .pinterest-bg:hover {
-    background: #a30618;
+    background: #0bcd14;
     color: #fff;
 }
 
@@ -2551,7 +2552,7 @@ input[type=checkbox]:checked + label:before {
 }
 
 .contact-2 .contact-innner {
-    margin: 0 auto -100px;
+    /*margin: 0 auto -100px;*/
     z-index: 999!important;
     background: #fff;
     box-shadow: 0px 5px 15px 0px rgb(62 65 159 / 10%);
@@ -7073,28 +7074,28 @@ mark {
 .social-media .twitter:hover,
 .social-media .twitter:hover .tooltip,
 .social-media .twitter:hover .tooltip::before {
-    background-color: #46c1f6;
+    background-color: #1da1f3;
     color: #ffffff;
 }
 
 .social-media .instagram:hover,
 .social-media .instagram:hover .tooltip,
 .social-media .instagram:hover .tooltip::before {
-    background-color: #e1306c;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
     color: #ffffff;
 }
 
 .social-media .github:hover,
 .social-media .github:hover .tooltip,
 .social-media .github:hover .tooltip::before {
-    background-color: #333333;
+    background-color: #2967b0;
     color: #ffffff;
 }
 
 .social-media .youtube:hover,
 .social-media .youtube:hover .tooltip,
 .social-media .youtube:hover .tooltip::before {
-    background-color: #de463b;
+    background-color: #ff0000;
     color: #ffffff;
 }
 
@@ -8887,7 +8888,7 @@ margin-top: 30px;
    /* background: rgba(0, 0, 0, 0.04) url(../img/img-2.jpg) top left repeat;*/
 	background-color: #012a2d;
     background-size: cover;
-    height: 400px;
+    height: 300px;
     background-position: center center;
     background-repeat: no-repeat;
     position: relative;
@@ -13095,9 +13096,9 @@ margin-top: 30px;
 }
 
 
-.btn:hover {
+/*.btn:hover {
   color: #000;
-}
+}*/
 
 
 .investment{
@@ -13793,30 +13794,73 @@ margin: 0 0 15px;
 
 
 
-.sub-banners {
-    background: rgba(0, 0, 0, 0.04) url(../img/properties/properties-11.jpg) top left repeat;
-      background-position-x: left;
-      background-position-y: top;
-      background-repeat: repeat;
-      background-size: auto;
-    background-position-x: left;
-    background-position-y: top;
-    background-repeat: repeat;
-    background-size: auto;
-    background-color: #012a2d;
-    background-size: cover;
-    height: 400px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    position: relative;
-  }
 
 
-  .items-bg{
+.items-bg{
 
 	height: 83vh !important;
 
 }
+
+.top-neg{
+
+	margin-top: -120px;
+
+}
+
+
+.btn-success {
+
+  background-color: #017069;
+  border-color: #026660;
+}
+
+
+.btn-success:hover {
+  color: #fff;
+  background-color: #538184;
+  border-color: #538184;
+}
+
+
+
+.dropbtn {
+  background-color: transparent;
+  color: #111;
+/*  padding: 16px;*/
+  	cursor: pointer;
+  border: none;
+}
+
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+	text-align: left;
+  background-color: #f1f1f1;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none !important;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: transparent;}
 
 
 

@@ -2,8 +2,8 @@
 <header class="main-header sticky-header header-with-top" id="main-header-2">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand logos" href="{{url('/')}}">
-                <img src="{{asset('frontend/assets/img/logos/black-logo.png')}}" alt="logo">
+            <a class="navbar-brand logos" href="{{ url('/') }}">
+                <img src="{{ asset('frontend/assets/img/logos/black-logo.png') }}" alt="logo">
             </a>
             <button class="navbar-toggler" id="drawer" type="button">
                 <span class="fa fa-bars"></span>
@@ -11,13 +11,13 @@
             <div class="navbar-collapse collapse w-100 justify-content-end" id="navbar">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item sp">
-                        <a href="{{url('/about')}}" class="nav-link link-color"> About Us </a>
+                        <a href="{{ url('/about') }}" class="nav-link link-color"> About Us </a>
                     </li>
                     <li class="nav-item sp">
-                        <a href="{{url('/properties')}}" class="nav-link link-color"> Properties</a>
+                        <a href="{{ url('/properties') }}" class="nav-link link-color"> Properties</a>
                     </li>
                     <li class="nav-item sp">
-                        <a href="{{url('/how-it-works')}}" class="nav-link link-color"> How it works</a>
+                        <a href="{{ url('/how-it-works') }}" class="nav-link link-color"> How it works</a>
                     </li>
 
 
@@ -27,71 +27,103 @@
                             Resources
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="{{url('/faq')}}">FAQs</a></li>
-                            <li><a class="dropdown-item" href="{{url('/blog')}}">Blog</a></li>
-                            <li><a class="dropdown-item" href="{{url('/contact')}}">Contact Us </a></li>
+                            <li><a class="dropdown-item" href="{{ url('/faq') }}">FAQs</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/blog') }}">Blog</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/contact') }}">Contact Us </a></li>
 
                         </ul>
                     </li>
-                    <!--<li class="nav-item sp">
-                    <a href="submit-property.html" class="nav-link link-color"><i class="fa fa-plus"></i> Submit Property</a>
-                </li>-->
                 </ul>
                 @guest
-                <a href="{{url('/login')}}" class="btn btn-primary btn-lg active" role="button"
-                    aria-pressed="true">Login</a>
+                    <a href="{{ url('/login') }}" class="btn btn-primary btn-lg active" role="button"
+                        aria-pressed="true">Login</a>
                 @endguest
-                @auth
-                <a href="{{url('/logout')}}" class="btn btn-danger btn-lg active" role="button"
-                aria-pressed="true">Logout</a>
-                @endauth
+                @role('user')
+                    <div class="dropdown">
+                        <button class="dropbtn"> <img src="{{ asset('frontend/assets/img/Person.ico') }}" width="40px;">
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="{{ url('user/portfolio-summary') }}">Dashboard</a>
+                            <a href="{{ url('user/stories') }}"> Post Blog <i class="fa fa-plus"></i></a>
+                            <a href="{{ url('/logout') }}">Logout</a>
+                        </div>
+                    </div>
+                @endrole
+                @role('super-admin')
+                    <div class="dropdown">
+                        <button class="dropbtn"> <img src="{{ asset('frontend/assets/img/Person.ico') }}" width="40px;">
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="{{ url('admin/property_add') }}">Dashboard</a>
+                            <a href="{{ url('/logout') }}">Logout</a>
+                        </div>
+                    </div>
+                @endrole
             </div>
-        </nav>
+    </div>
+    </nav>
     </div>
 </header>
 <!-- Main header end -->
 
- <!-- Sidenav start -->
- <nav id="sidebar" class="nav-sidebar">
+<!-- Sidenav start -->
+<nav id="sidebar" class="nav-sidebar">
     <!-- Close btn-->
     <div id="dismiss">
         <i class="fa fa-close"></i>
     </div>
     <div class="sidebar-inner">
         <div class="sidebar-logo">
-            <img src="{{asset('frontend/assets/img/logos/black-logo.png')}}" alt="sidebarlogo">
+            <img src="{{ asset('frontend/assets/img/logos/black-logo.png') }}" alt="sidebarlogo">
         </div>
         <div class="sidebar-navigation">
 
             <ul class="menu-list">
                 <li>
-                    <a href="{{url('/about')}}">Abouts</a>
+                    <a href="{{ url('/about') }}">Abouts</a>
                 </li>
                 <li>
-                    <a href="properties">Properties</a>
+                    <a href="{{ url('/properties') }}">Properties</a>
                 </li>
 
                 <li>
-                    <a href="{{url('/how-it-works')}}">How it works</a>
+                    <a href="{{ url('/how-it-works') }}">How it works</a>
                 </li>
 
                 <li><a href="#">Resources <em class="fa fa-chevron-down"></em></a>
                     <ul>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="{{url('/blog')}}">Blog</a></li>
-                        <li><a href="{{url('/contact')}}">Contact Us </a></li>
+                        <li><a href="{{ url('/faq') }}">FAQs</a></li>
+                        <li><a href="{{ url('/blog') }}">Blog</a></li>
+                        <li><a href="{{ url('/contact') }}">Contact Us </a></li>
 
                     </ul>
                 </li>
 
+                @role('user')
+                    <li><a href="#"><i class="fa fa-user-circle-o " aria-hidden="true"></i></a>
+                        <ul>
+                            <li><a href="{{ url('user/portfolio-summary') }}">Dashboard</a></li>
+                            <li><a href="{{ url('user/stories') }}">Post Blog <i class="fa fa-plus"></i></a></li>
+                            <li><a href="{{ url('/logout') }}">Logout </a></li>
 
-                <!--<li>
-                <a href="submit-property.html">Submit Property</a>
-            </li>-->
+                        </ul>
+                    </li>
+                @endrole
+                @role('super-admin')
+                    <li><a href="#"><i class="fa fa-user-circle-o " aria-hidden="true"></i></a>
+                        <ul>
+                            <li><a href="{{ url('admin/property_add') }}">Dashboard</a></li>
+                            <li><a href="{{ url('/logout') }}">Logout </a></li>
+
+                        </ul>
+                    </li>
+                @endrole
 
             </ul>
-            <a href="login.html" class="btn btn-primary btn-lg active" role="button"
-                aria-pressed="true">Login</a>
+            @guest
+                <a href="{{ url('/login') }}" class="btn btn-primary btn-lg active" role="button"
+                    aria-pressed="true">Login</a>
+            @endguest
         </div>
         <div class="get-in-touch">
             <h3 class="heading">Get in Touch</h3>
