@@ -32,7 +32,7 @@ class GoogleController extends Controller
 
                 ]);
             }
-            $newuser = User::where('id',$saveUser['id'])->first();
+            $newuser = User::where('email',$user->getEmail())->first();
             Auth::loginUsingId($newuser->id);
             return redirect('user/portfolio-summary');
 
