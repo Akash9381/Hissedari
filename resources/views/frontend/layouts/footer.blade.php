@@ -61,16 +61,16 @@
                         <div class="m-border"></div>
                         <ul class="links">
                             <li>
-                                <a href="#"><i class="fa fa-angle-right"></i>Properties</a>
+                                <a href="{{ url('/properties') }}"><i class="fa fa-angle-right"></i>Properties</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-angle-right"></i>How it works</a>
+                                <a href="{{ url('/how-it-works') }}"><i class="fa fa-angle-right"></i>How it works</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-angle-right"></i>About us</a>
+                                <a href="{{ url('/about') }}"><i class="fa fa-angle-right"></i>About us</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-angle-right"></i>Contact Us</a>
+                                <a href="{{ url('/contact') }}"><i class="fa fa-angle-right"></i>Contact Us</a>
                             </li>
 
                             <li>
@@ -90,10 +90,10 @@
                         <div class="m-border"></div>
                         <ul class="links">
                             <li>
-                                <a href="#"><i class="fa fa-angle-right"></i>FAQ</a>
+                                <a href="{{ url('/faq') }}"><i class="fa fa-angle-right"></i>FAQ</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-angle-right"></i>Blog</a>
+                                <a href="{{ url('/blog') }}"><i class="fa fa-angle-right"></i>Blog</a>
                             </li>
                         </ul>
                     </div>
