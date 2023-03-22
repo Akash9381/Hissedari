@@ -159,7 +159,8 @@
 
                                 <div class="google">
 
-                                    <a href="#"><img width="20px;"
+                                    <a href="{{'/google'}}">
+                                        <img width="20px;"
                                             src="{{ asset('frontend/assets/img/google_icon.svg') }}"> &nbsp; signup
                                         With Google</a>
 
