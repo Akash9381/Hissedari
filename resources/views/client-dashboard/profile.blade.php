@@ -258,8 +258,8 @@
     </div>
 
     <div class="col-lg-6 col-md-12 col-sm-12">
-        <button type="submit" class="btn-6 mt-20">Update
-        </button>
+        <a href="{{user/investment-details}}" class="btn-6 mt-20">Update
+        </a>
     </div>
 
 
