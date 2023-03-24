@@ -11,7 +11,7 @@
 
             <li class="active"><a href="{{url('user/investment-details')}}"><i class="fa fa-user"></i>Investor Details </a></li>
 
-            <li><a href="linked-payment-account.html"><i class="fa fa-user-plus"></i> Linked Payment
+            <li><a href="{{url('user/linked-payment-account')}}"><i class="fa fa-user-plus"></i> Linked Payment
                     Account
                 </a></li>
 
@@ -55,7 +55,7 @@
                             <li><a href="{{url('user/investment-details')}}"><i
                                         class="fa fa-user menu-icon"></i>Investor Details </a></li>
 
-                            <li><a href="linked-payment-account.html"><i
+                            <li><a href="{{url('user/linked-payment-account')}}"><i
                                         class="fa fa-user-plus menu-icon"></i> Linked Payment Account
                                 </a></li>
 

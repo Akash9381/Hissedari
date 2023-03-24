@@ -48,13 +48,14 @@ Route::any('/google/response',[GoogleController::class,'GoogleResponse']);
 
 Route::prefix('user')->group(function(){
     Route::group(['middleware' => ['role:user']],function(){
-    Route::view('/investment-details','client-dashboard.investor-details');
+    Route::get('/investment-details',[UserController::class,'InverstorDetails']);
     Route::post('/details',[UserController::class,'InsertData']);
     Route::view('/invested','client-dashboard.invested');
     Route::view('/documents','client-dashboard.documents-details');
     Route::view('/portfolio-summary','client-dashboard.portfolio-summary');
     Route::view('/my-assets','client-dashboard.my-assets');
     Route::get('/profile',[UserController::class,'Profile']);
+    Route::get('/linked-payment-account',[UserController::class,'BankAccount']);
     });
 });
 

@@ -110,4 +110,14 @@ class UserController extends Controller
         $user = User::with('InvestorData')->where('id',auth()->user()->id)->first();
         return view('client-dashboard.profile',compact('user'));
     }
+
+    public function BankAccount(){
+        $user = User::with('InvestorData')->where('id',auth()->user()->id)->first();
+        return view('client-dashboard.linked-payment-account',compact('user'));
+    }
+
+    public function InverstorDetails(){
+        $user = User::with('InvestorData')->where('id',auth()->user()->id)->first();
+        return view('client-dashboard.investor-details',compact('user'));
+    }
 }

@@ -498,7 +498,7 @@
                                                     <h6 class="mt-2 m-b-0">Name </h6>
                                                     <span class="job_post">
                                                         @isset($user['InvestorData']['nominee_first_name'])
-                                                        {{ $user['InvestorData']['nominee_first_name'] }}
+                                                        {{ $user['InvestorData']['nominee_first_name'] }} {{ $user['InvestorData']['nominee_last_name'] ?? ''}}
                                                     @else
                                                         NA
                                                     @endisset</span>
