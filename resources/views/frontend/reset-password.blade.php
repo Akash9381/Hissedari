@@ -5,7 +5,7 @@
     <!-- Google Tag Manager -->
 
     <!-- End Google Tag Manager -->
-    <title>HISSEDARI - Forgot Password</title>
+    <title>HISSEDARI - Reset Password</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
 
@@ -107,14 +107,19 @@
                                     {{ session()->get('status') }}
                                 </div>
                             @endif
-                            <form action="{{ url('password-forgot') }}" method="POST">
+                            <form action="{{ url('password-update') }}" method="POST">
                                 @csrf
                                 <div class="form-group form-box">
-                                    <input type="email" name="email" class="form-control" autocomplete="off"
+                                    <input type="text" hidden name="token" id="" value="{{$token}}">
+                                    <input type="email" hidden value="{{request()->get('email')}}" name="email" class="form-control" autocomplete="off"
                                         placeholder="Email Address" aria-label="Email Address">
-                                    @error('email')
+                                    <input type="password" name="password" id="" class="form-control mb-2"
+                                        autocomplete="off" placeholder="Password">
+                                    @error('password')
                                         <label for="" class="text-danger">{{ $message }}</label>
                                     @enderror
+                                    <input type="password" name="password_confirmation" id="" class="form-control"
+                                        autocomplete="off" placeholder="Confirm Password">
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn-md btn-theme w-100">Send Me Email</button>

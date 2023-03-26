@@ -35,7 +35,13 @@ Route::get('/property/{id}/{slug}',[PropertyController::class,'PropertyDetails']
 Route::view('properties-details','frontend.properties-details');
 Route::view('login','frontend.login')->name('login')->middleware('guest');
 Route::view('admin-login','frontend.admin-login')->name('admin.login')->middleware('guest');
-Route::view('forgot-password','frontend.forgot-password')->name('admin.forgotpassword')->middleware('guest');
+Route::view('forgot-password','frontend.forgot-password')->name('forgotpassword')->middleware('guest');
+Route::get('/reset-password/{token}', function (string $token) {
+    return view('frontend.reset-password', ['token' => $token]);
+})->middleware('guest')->name('password.reset');
+
+Route::post('password-update',[UserController::class,'UpdatePassword'])->middleware('guest')->name('password.update');
+
 Route::view('signup','frontend.signup');
 
 Route::view('faq', 'frontend.faq' );
@@ -43,7 +49,7 @@ Route::view('faq', 'frontend.faq' );
 //================Auto Login With Google   ================
 Route::get('/google',[GoogleController::class,'LoginWithGoogle']);
 Route::any('/google/response',[GoogleController::class,'GoogleResponse']);
-
+Route::post('password-forgot',[UserController::class,'ForgotPassword'])->name('user.forgotpassword');
 // ==================Client Dashboard Urls Starts ==============================
 
 Route::prefix('user')->group(function(){

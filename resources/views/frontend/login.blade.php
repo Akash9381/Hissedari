@@ -113,7 +113,7 @@
                                         Remember me
                                     </label>
                                 </div>
-                                <a href="forgot-password.html">Forgot Password</a>
+                                <a href="{{url('/forgot-password')}}">Forgot Password</a>
                             </div>
 
                             <div class="form-group">
