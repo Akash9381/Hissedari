@@ -122,7 +122,7 @@
                                         autocomplete="off" placeholder="Confirm Password">
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="btn-md btn-theme w-100">Send Me Email</button>
+                                    <button type="submit" class="btn-md btn-theme w-100">Reset Password</button>
                                 </div>
                                 <p>Already a member?<a href="{{ url('login') }}"> Login here</a></p>
                             </form>
