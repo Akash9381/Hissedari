@@ -128,7 +128,7 @@
                         <div class="s-border"></div>
                         <div class="m-border"></div>
                         <a href="{{url('admin-login')}}" class="btn btn-success" >Admin</a>
-                        <a href="#" class="btn btn-success" role="button" data-bs-toggle="button">cp panel</a>
+                        <a href="{{url('cp-panel/registration')}}" class="btn btn-success">cp panel</a>
                     </div>
                 </div>
 

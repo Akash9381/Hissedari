@@ -101,3 +101,12 @@ Route::group(['middleware' => ['role:super-admin']], function(){
     Route::get('admin/blog-preview/{id}',[BlogController::class,'AdminBlogPreview']);
     Route::get('admin/blog/approved/{id}',[BlogController::class,'AdminBlogApproved']);
 });
+
+
+//*******************************/ C-PANEL ******************************************
+
+Route::view('cp-panel/registration','cp-panel.register');
+Route::view('cp-panel/login','cp-panel.login');
+Route::view('cp-panel/profile-summary','cp-panel.profile-summary');
+Route::view('cp-panel/my-references','cp-panel.my-references');
+Route::view('cp-panel/references-table','cp-panel.references-table');
