@@ -21,6 +21,8 @@ class AuthController extends Controller
                 if(Auth::user()){
                     if(Auth::user()->hasRole('super-admin')){
                         return redirect('admin/property_add');
+                    }else{
+                        return redirect(route('logout'));
                     }
                 }
         }else{
@@ -40,6 +42,8 @@ class AuthController extends Controller
             if(Auth::user()){
                 if(Auth::user()->hasRole('user')){
                         return redirect('user/portfolio-summary');
+                    }else{
+                        return redirect(route('logout'));
                     }
                 }
         }else{

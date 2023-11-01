@@ -92,7 +92,7 @@ class PropertyController extends Controller
                     $extension = $image->getClientOriginalExtension();
                     $filenametostore = $filename . '_' . time() . '.' . $extension;
                     $image->storeAs('public/property_image', $filenametostore);
-
+ 
                     $featureimagepath = public_path('storage/property_image/' . $filenametostore);
                     Image::make($featureimagepath)->resize(1920, 1080)->save($featureimagepath);
                     $data = new PropertyImage;

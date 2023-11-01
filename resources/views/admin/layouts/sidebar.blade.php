@@ -33,7 +33,7 @@
                     </li>
 
                     <li><a href="groups.html"><span>Account</span></a></li>
-                    <li><a href="file-dashboard.html"><span>CP</span></a></li>
+                    <li><a href="{{route('admin.cp.list')}}"><span>CP</span></a></li>
                     <li class="{{ setACtiveClass('admin/approval-property') }}"><a
                             href="{{ url('admin/approval-property') }}"><span>Property Approval</span></a></li>
                     <li><a href="jvectormap.html"><span>Relationship Manager</span></a></li>

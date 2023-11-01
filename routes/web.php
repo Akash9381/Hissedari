@@ -10,6 +10,8 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
+use Modules\CpPanel\Http\Controllers\CpPanelController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -53,7 +55,7 @@ Route::post('password-forgot',[UserController::class,'ForgotPassword'])->name('u
 // ==================Client Dashboard Urls Starts ==============================
 
 Route::prefix('user')->group(function(){
-    Route::group(['middleware' => ['role:user']],function(){
+    Route::group(['middleware' => ['role:user','auth']],function(){
     Route::get('/investment-details',[UserController::class,'InverstorDetails']);
     Route::post('/details',[UserController::class,'InsertData']);
     Route::view('/invested','client-dashboard.invested');
@@ -70,14 +72,14 @@ Route::prefix('user')->group(function(){
 Route::controller(AuthController::class)->group(function(){
     Route::post('authenticate','authenticate')->name('authenticate');
     Route::post('user-login','UserLogin')->name('user.login');
-    Route::get('/logout','logout');
+    Route::get('/logout','logout')->name('logout');
     Route::post('register','Register');
 });
 
 Route::controller(BlogController::class)->group(function(){
     Route::get('blog','Index')->name('blog');
     Route::get('blog-details/{id}/{slug}','BlogDetails');
-    Route::group(['middleware' => ['role:user']],function(){
+    Route::group(['middleware' => ['role:user','auth']],function(){
         Route::get('user/stories','BlogDashboard')->name('blog.dashboard');
         Route::get('user/new-story/{id?}','BlogCreateNewStory');
         Route::post('user/create-story/{id?}','BlogCreate');
@@ -86,7 +88,7 @@ Route::controller(BlogController::class)->group(function(){
     });
 });
 
-Route::group(['middleware' => ['role:super-admin']], function(){
+Route::group(['middleware' => ['role:super-admin','auth']], function(){
     Route::get('admin/property_add',[PropertyController::class,'index']);
     Route::post('admin/property-insert',[PropertyController::class,'store']);
     Route::post('/property/update/{id}',[PropertyController::class,'update']);
@@ -100,6 +102,10 @@ Route::group(['middleware' => ['role:super-admin']], function(){
     Route::get('admin/blog-approval',[BlogController::class,'BlogApproval']);
     Route::get('admin/blog-preview/{id}',[BlogController::class,'AdminBlogPreview']);
     Route::get('admin/blog/approved/{id}',[BlogController::class,'AdminBlogApproved']);
+    // chanel partner
+    Route::get('admin/cp-list',[CpPanelController::class,'CpList'])->name('admin.cp.list');
+    Route::get('admin/cp-refrences/{id}',[CpPanelController::class,'CpReferance'])->name('admin.cp.refrences');
+    Route::get('admin/cp-refrences/delete/{id}',[CpPanelController::class,'CpReferanceDelete'])->name('admin.cp.refrences.delete');
 });
 
 
@@ -108,5 +114,5 @@ Route::group(['middleware' => ['role:super-admin']], function(){
 Route::view('cp-panel/registration','cp-panel.register');
 Route::view('cp-panel/login','cp-panel.login');
 Route::view('cp-panel/profile-summary','cp-panel.profile-summary');
-Route::view('cp-panel/my-references','cp-panel.my-references');
-Route::view('cp-panel/references-table','cp-panel.references-table');
+Route::view('cp-panel/invoice-list','cp-panel.invoice-list');
+Route::view('cp-panel/invoice-details','cp-panel.invoice-details');

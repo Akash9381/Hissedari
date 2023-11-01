@@ -22,7 +22,7 @@ class adminseeder extends Seeder
             'email'             => 'admin@gmail.com',
             'password'          => Hash::make('admin@123'),
             'email_verified_at' => Carbon::now()
-        ]);
+        ]); 
         $user->assignRole('super-admin');
     }
 }

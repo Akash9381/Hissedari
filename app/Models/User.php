@@ -9,6 +9,11 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Database\Eloquent\Model;
+use Modules\CpPanel\Entities\CpBankDetail;
+use Modules\CpPanel\Entities\CpCorporateOfficeAddress;
+use Modules\CpPanel\Entities\CpDocument;
+use Modules\CpPanel\Entities\CpPanel;
+use Modules\CpPanel\Entities\CpRegisterOfficeAddress;
 
 class User extends Authenticatable
 {
@@ -42,5 +47,21 @@ class User extends Authenticatable
 
     public function InvestorData(){
         return $this->hasOne(InvertorDetail::class,'user_id','id');
+    }
+
+    public function CpData(){
+        return $this->hasOne(CpPanel::class,'user_id','id');
+    }
+    public function CpBankDetails(){
+        return $this->hasMany(CpBankDetail::class,'user_id','id');
+    }
+    public function CpDocuments(){
+        return $this->hasOne(CpDocument::class,'user_id','id');
+    }
+    public function CpCorporateOffice(){
+        return $this->hasOne(CpCorporateOfficeAddress::class,'user_id','id');
+    }
+    public function CpRegisterOffice(){
+        return $this->hasOne(CpRegisterOfficeAddress::class,'user_id','id');
     }
 }

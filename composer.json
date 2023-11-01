@@ -12,6 +12,9 @@
         "laravel/sanctum": "^3.0",
         "laravel/socialite": "^5.6",
         "laravel/tinker": "^2.7",
+        "livewire/livewire": "^2.12",
+        "maatwebsite/excel": "^3.1",
+        "nwidart/laravel-modules": "^9.0",
         "spatie/laravel-permission": "^5.9"
     },
     "require-dev": {
@@ -26,6 +29,7 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
+            "Modules\\": "Modules/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         },
@@ -41,7 +45,8 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php artisan package:discover --ansi",
+            "@php artisan vendor:publish --force --tag=livewire:assets --ansi"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"

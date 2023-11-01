@@ -9,19 +9,16 @@
                             <div class="user-info">
                                 <div class="image">
 
-                                    <a href="#"><img src="{{asset('c-panel/light/assets/img/icon/Person.ico')}}" alt="admin"> &nbsp;
+                                    <a href="{{route('cp.profile')}}"><img src="{{asset('c-panel/light/assets/img/icon/Person.ico')}}" alt="admin"> &nbsp;
                                         <small class="admin">Name</small></a>
                                 </div>
 
                             </div>
                         </li>
 
-
-
-
                         <li><a href="{{url('cp-panel/profile-summary')}}"><span> Profile Summary</span></a></li>
                         <li><a href="{{url('cp-panel/my-references')}}"><span> My References</span></a></li>
-                        <li><a href="#"><span> Invoice Details </span></a></li>
+                        <li><a href="{{url('cp-panel/invoice-list')}}"><span> Invoice Details </span></a></li>
                         <li><a href="#"><span> R&R's</span></a></li>
 
 

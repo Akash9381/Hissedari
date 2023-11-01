@@ -27,7 +27,7 @@
             </div>
         </li>
         <li class="float-right">
-            <a href="sign-in.html" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a>
+            <a href="{{url('logout')}}" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a>
             <!--<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-settings zmdi-hc-spin"></i>  </a>-->
         </li>
 

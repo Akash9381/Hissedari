@@ -1,0 +1,11 @@
+{
+    "name": "CpPanel",
+    "alias": "cppanel",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\CpPanel\\Providers\\CpPanelServiceProvider"
+    ],
+    "files": []
+}
