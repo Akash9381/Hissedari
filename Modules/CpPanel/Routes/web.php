@@ -15,8 +15,8 @@ use Modules\CpPanel\Http\Controllers\CpPanelController;
 
 Route::prefix('cp-panel')->group(function() {
     Route::get('/login', 'CpPanelController@index')->name('cp-panel.login')->middleware('guest');
-    Route::get('/registration', 'CpPanelController@register');
-    Route::post('/register', 'CpPanelController@Create')->name('cp-panel.register');
+    Route::get('/registration', 'CpPanelController@register')->name('cp-panel.register');
+    Route::post('/register', 'CpPanelController@Create')->name('cp-panel.registration');
     
     Route::middleware(['auth','role:chanel-partner'])->group(function () {
         Route::get('/profile',[CpPanelController::class,'Profile'])->name('cp.profile');

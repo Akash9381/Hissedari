@@ -49,7 +49,7 @@
                         </button>
                       </div>
                     @endif
-                    <form class="form" method="post" action="{{ route('cp-panel.register') }}" autocomplete="off">
+                    <form class="form" method="post" action="{{ route('cp-panel.registration') }}" autocomplete="off">
                         @csrf
                         <div class="header">
                             <div class="logo-container">
