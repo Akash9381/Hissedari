@@ -12,7 +12,7 @@
                         <div class="user-info">
                             <div class="image">
 
-                                <a href="profile.html"><img src="{{ asset('admin/light/assets/img/icon/Person.ico') }}"
+                                <a href="javascript:void(0);"><img src="{{ asset('admin/light/assets/img/icon/Person.ico') }}"
                                         alt="admin">
                                     &nbsp; <small class="admin">Admin</small></a>
                             </div>
@@ -32,12 +32,12 @@
                         </ul>
                     </li>
 
-                    <li><a href="groups.html"><span>Account</span></a></li>
+                    <li><a href="javascript:void(0);"><span>Account</span></a></li>
                     <li><a href="{{route('admin.cp.list')}}"><span>CP</span></a></li>
                     <li class="{{ setACtiveClass('admin/approval-property') }}"><a
                             href="{{ url('admin/approval-property') }}"><span>Property Approval</span></a></li>
-                    <li><a href="jvectormap.html"><span>Relationship Manager</span></a></li>
-                    <li><a href="jvectormap.html"><span>Employee
+                    <li><a href="javascript:void(0);"><span>Relationship Manager</span></a></li>
+                    <li><a href="javascript:void(0);"><span>Employee
                             </span></a></li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><span>Blog</span></a>
                         <ul class="ml-menu">

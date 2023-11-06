@@ -56,7 +56,7 @@
 <header class="main-header sticky-header header-with-top" id="main-header-2">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand logos" href="index.html">
+            <a class="navbar-brand logos" href="javascript:void(0);">
                 <img src="img/logos/black-logo.png" alt="logo">
             </a>
             <button class="navbar-toggler" id="drawer" type="button">
@@ -359,7 +359,7 @@
 <!-- Full Page Search -->
 <div id="full-page-search">
     <button type="button" class="close">×</button>
-    <form action="https://storage.googleapis.com/theme-vessel-items/checking-sites/neer-2-html/HTML/main/index.html#">
+    <form action="https://storage.googleapis.com/theme-vessel-items/checking-sites/neer-2-html/HTML/main/javascript:void(0);#">
         <input type="search" value="" placeholder="type keyword(s) here"/>
         <button type="submit" class="btn btn-sm button-theme">Search</button>
     </form>

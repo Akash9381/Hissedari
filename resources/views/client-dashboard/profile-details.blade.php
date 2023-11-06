@@ -55,7 +55,7 @@
 <header class="main-header sticky-header header-with-top2" id="main-header-2">
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand logos" href="index.html">
+            <a class="navbar-brand logos" href="javascript:void(0);">
                 <img src="img/logos/black-logo.png" alt="logo">
             </a>
             <button class="navbar-toggler" id="drawer" type="button">
@@ -68,7 +68,7 @@
                             Index
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="index.html">Index 01</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);">Index 01</a></li>
                             <li><a class="dropdown-item" href="index-2.html">Index 02</a></li>
                             <li><a class="dropdown-item" href="index-3.html">Index 03</a></li>
                             <li><a class="dropdown-item" href="index-4.html">Index 04</a></li>
@@ -241,7 +241,7 @@
             <ul class="menu-list">
                 <li><a href="#" class="pt0">Index <em class="fa fa-chevron-down"></em></a>
                     <ul>
-                        <li><a href="index.html">Index 01 <span class="badge badge-success">New</span></a></li>
+                        <li><a href="javascript:void(0);">Index 01 <span class="badge badge-success">New</span></a></li>
                         <li><a href="index-2.html">Index 02</a></li>
                         <li><a href="index-3.html">Index 03</a></li>
                         <li><a href="index-4.html">Index 04</a></li>
@@ -1067,7 +1067,7 @@
 <!-- Full Page Search -->
 <div id="full-page-search">
     <button type="button" class="close">×</button>
-    <form action="https://storage.googleapis.com/theme-vessel-items/checking-sites/neer-2-html/HTML/main/index.html#">
+    <form action="https://storage.googleapis.com/theme-vessel-items/checking-sites/neer-2-html/HTML/main/javascript:void(0);#">
         <input type="search" value="" placeholder="type keyword(s) here"/>
         <button type="submit" class="btn btn-sm button-theme">Search</button>
     </form>

@@ -28,6 +28,15 @@
         <div class="page-header-image" style="background-image:url({{ asset('c-panel/assets/images/login.jpg') }})">
         </div>
         <div class="container">
+            @if (Session::has('success'))
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>Success!</strong> 
+                        {{Session::get('success')}}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                    @endif
             <div class="col-md-12 content-center">
                 <div class="card-plain">
                     {{-- <form class="form" method="" action="#">

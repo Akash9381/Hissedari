@@ -113,7 +113,7 @@ class CpPanelController extends Controller
             $cp->company_name   = $request->company_name;
             $cp->status         = 'no';
             $cp->save();
-            return back()->with('success','Chanel partner register successfully! Please login');            
+            return redirect(route('cp-panel.login'))->with('success','Chanel partner register successfully! Please login');            
         }catch(\Exception $e){
             return back()->with('error',$e->getMessage());
         }
@@ -181,7 +181,11 @@ class CpPanelController extends Controller
                 $array['pan_card_photo'] = $filenametostore;
             }else{
                 $pan_photo = CpPanel::where('user_id',$auth_id)->select('pan_card_photo')->first();
-                $array['pan_card_photo'] = $pan_photo['pan_card_photo'];
+                if($pan_photo){
+                    $array['pan_card_photo'] = $pan_photo['pan_card_photo'];
+                }else{
+                    $array['pan_card_photo'] = null;
+                }
             };
 
             if ($request->hasFile('profile')) {
@@ -196,7 +200,11 @@ class CpPanelController extends Controller
                 $array['profile'] = $filenametostore;
             }else{
                 $pan_photo = CpPanel::where('user_id',$auth_id)->select('profile')->first();
-                $array['profile'] = $pan_photo['profile'];
+                if($pan_photo){
+                    $array['profile'] = $pan_photo['profile'];
+                }else{
+                    $array['profile'] = null;
+                }
             };
 
 
@@ -218,6 +226,7 @@ class CpPanelController extends Controller
                 'pan_card_photo'            => $array['pan_card_photo'],
                 'profile'                   => $array['profile']
             ]);
+            
 
             if ($request->hasFile('document_front_side')) {
                 $filenamewithextension = $request->file('document_front_side')->getClientOriginalName();
@@ -231,7 +240,11 @@ class CpPanelController extends Controller
                 $array['document_front_side'] = $filenametostore;
             }else{
                 $pan_photo = CpDocument::where('user_id',$auth_id)->select('document_front_side')->first();
-                $array['document_front_side'] = $pan_photo['document_front_side'];
+                if($pan_photo){
+                    $array['document_front_side'] = $pan_photo['document_front_side'];
+                }else{
+                    $array['document_front_side'] = null;
+                }
             };
 
             if ($request->hasFile('document_back_side')) {
@@ -246,7 +259,11 @@ class CpPanelController extends Controller
                 $array['document_back_side'] = $filenametostore;
             }else{
                 $pan_photo = CpDocument::where('user_id',$auth_id)->select('document_back_side')->first();
-                $array['document_back_side'] = $pan_photo['document_back_side'];
+                if($pan_photo){
+                    $array['document_back_side'] = $pan_photo['document_back_side'];
+                }else{
+                    $array['document_back_side'] = null;
+                }
             };
 
             CpDocument::updateOrCreate([
@@ -273,6 +290,7 @@ class CpPanelController extends Controller
                 'pincode'                   => $request['register_pincode'],
                 'landmark'                  => $request['register_landmark'],
             ]);
+
 
             CpCorporateOfficeAddress::updateOrCreate([
                 'user_id' => $auth_id

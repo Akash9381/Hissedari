@@ -20,12 +20,12 @@
             </a>
 
         </li>
-        <li class="hidden-sm-down">
+        {{-- <li class="hidden-sm-down">
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search...">
                 <span class="input-group-addon"><i class="zmdi zmdi-search"></i></span>
             </div>
-        </li>
+        </li> --}}
         <li class="float-right">
             <a href="{{url('logout')}}" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a>
             <!--<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-settings zmdi-hc-spin"></i>  </a>-->

@@ -10,7 +10,7 @@
                                 <div class="image">
 
                                     <a href="{{route('cp.profile')}}"><img src="{{asset('c-panel/light/assets/img/icon/Person.ico')}}" alt="admin"> &nbsp;
-                                        <small class="admin">Name</small></a>
+                                        <small class="admin">{{auth()->user()->name ?? ''}}</small></a>
                                 </div>
 
                             </div>

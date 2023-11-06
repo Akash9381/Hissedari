@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-lg-5 col-md-6 col-sm-12">
                     <ul class="breadcrumb float-md-right">
-                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Home</a></li>
+                        <li class="breadcrumb-item"><a href="javascript:void(0);"><i class="zmdi zmdi-home"></i> Home</a></li>
                         <li class="breadcrumb-item"><a href="javascript:void(0);"> CP Profile Summary </a></li>
 
                     </ul>
@@ -449,10 +449,22 @@
                                         <label>Document Type</label>
                                         <select class="form-control show-tick ms select2" data-placeholder="Select"
                                             name="document_type">
-                                            <option @if ($cpdatas->CpDocuments['document_type'] == 'Passport') selected @endif>Passport</option>
-                                            <option @if ($cpdatas->CpDocuments['document_type'] == 'Aadhaar Card') selected @endif> Aadhaar Card</option>
-                                            <option @if ($cpdatas->CpDocuments['document_type'] == 'Voter ID Card') selected @endif>Voter ID Card</option>
-                                            <option @if ($cpdatas->CpDocuments['document_type'] == 'Driving Licence') selected @endif>Driving Licence</option>
+                                            <option
+                                            @if (isset($cpdatas->CpDocuments['document_type']))
+                                            @if ($cpdatas->CpDocuments['document_type'] == 'Passport') selected @endif
+                                            @endif
+                                            
+                                            >Passport</option>
+                                            <option 
+                                            @if (isset($cpdatas->CpDocuments['document_type']))
+                                            @if ($cpdatas->CpDocuments['document_type'] == 'Aadhaar Card') selected @endif @endif> Aadhaar Card</option>
+
+                                            <option 
+                                            @if (isset($cpdatas->CpDocuments['document_type']))
+                                            @if ($cpdatas->CpDocuments['document_type'] == 'Voter ID Card') selected @endif @endif>Voter ID Card</option>
+                                            <option 
+                                            @if (isset($cpdatas->CpDocuments['document_type']))
+                                            @if ($cpdatas->CpDocuments['document_type'] == 'Driving Licence') selected @endif @endif>Driving Licence</option>
                                         </select>
                                     </div>
 

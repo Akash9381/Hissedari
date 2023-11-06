@@ -56,7 +56,7 @@
 <header class="main-header sticky-header header-with-top" id="main-header-2">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand logos" href="index.html">
+            <a class="navbar-brand logos" href="javascript:void(0);">
                 <img src="img/logos/black-logo.png" alt="logo">
             </a>
             <button class="navbar-toggler" id="drawer" type="button">
